@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+#layer_1{
+	position:absolute;
+	top:0;
+	left:0;
+	
+	width: 100%;
+	height: 100%;
+}
+
+#layer_1_left{
+	position: inherit;
+	top: 0;
+	left: 0;
+	
+	width: 20%;
+	height: 100%;
+}
+
+#layer_1_center{
+	position: inherit;
+	top: 0;
+	left: 20%;
+	
+	width: 60%;
+	height: 100%;
+}
+
+#layer_1_right{
+	position: inherit;
+	top: 0;
+	left: 80%;
+	
+	width: 20%;
+	height: 100%;
+}
+
+#form_mod_user{
+	margin: 0 auto;
+}
+
+td{text-align:left;}

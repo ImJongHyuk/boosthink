@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.develope.plto.mapper">
+
+	<select id="selectLayoutCpnt" parameterType="int" resultType="com.develope.plto.domain.LayoutCpnt">
+		select * from tb_layout_cpnt where FD_CATEGORY=#{FD_CATEGORY}
+	</select>
+	<select id="selectAllLayoutCpnt" resultType="com.develope.plto.domain.LayoutCpnt">
+		select * from tb_layout_cpnt
+	</select>
+</mapper>

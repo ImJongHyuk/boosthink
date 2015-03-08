@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.develope.plto.mapper">
+
+	<select id="selectAllSession" resultType="com.develope.plto.domain.LoginSession">
+		select * from tb_login_session_info
+	</select>
+	
+	<select id="selectSession" parameterType="String" resultType="com.develope.plto.domain.LoginSession">
+		select * from tb_login_session_info where FD_USER_EMAIL = #{FD_USER_EMAIL}
+	</select>
+	
+	<insert id="insert" parameterType="com.develope.plto.domain.LoginSession">
+		insert into tb_login_session_info values(#{FD_SESSION_ID},#{FD_USER_EMAIL},#{FD_LOGIN_TIME})
+	</insert>
+	
+	<delete id="delete" parameterType="String">
+		delete from tb_login_session_info where FD_USER_EMAIL = #{FD_USER_EMAIL}
+	</delete>
+	
+	<select id="selectEmail" parameterType="String" resultType="String">
+		select FD_USER_EMAIL from tb_login_session_info where FD_SESSION_ID = #{FD_SESSION_ID}
+	</select>
+	
+</mapper>

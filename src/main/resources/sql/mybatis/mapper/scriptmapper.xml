@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.develope.plto.mapper">
+	
+	<insert id="insert" parameterType="com.develope.plto.domain.ScriptMapper">
+		insert into tb_mapping values(null,#{FD_PLANG_ID},#{FD_LAYOUT_ID},#{FD_EVENT_ID})
+	</insert>
+	
+	<parameterMap type="hashMap" id="sPlangParameter" >
+		<parameter property="layout_id" jdbcType="INTEGER"/>
+		<parameter property="event_id" jdbcType="VARCHAR"/>
+	</parameterMap>
+	
+	<select id="selectPlangId" parameterMap="sPlangParameter" resultType="String">
+		select FD_PLANG_ID from tb_mapping where FD_LAYOUT_ID=? and FD_EVENT_ID=?
+	</select>
+	
+</mapper>

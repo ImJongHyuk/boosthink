@@ -1,0 +1,177 @@
+/*
+javaCC플러그인 받아라!
+
+기본 문법
+|   -> 선택
++   -> 1회 이상 반복
+*   -> 0회 이상 반복
+?   -> 앞선 요소가 선택적
+[]  -> 내부 구성요소들 중 하나
+~   -> 무엇 무엇을 제외
+    ex) ~["$"] -> $를 제외한 하나의 문자
+LOOKAHEAD   -> 문법 결정시 Token 몇개를 미리 보는것
+*/
+
+//Tiny version
+
+options{
+	//IGNORE_CASE = true;
+ 	//FORCE_LA_CHECK = true;
+ 	//DEBUG_TOKEN_MANAGER=true;
+	//DEBUG_PARSER = true;
+	//DEBUG_LOOKAHEAD = true;
+ 	STATIC=false;
+	//JAVA_UNICODE_ESCAPE = true;
+	//ERROR_REPORTING = true;
+	//KEEP_LINE_COLUMN = true;
+	//USER_CHAR_STREAK = true;
+ 	UNICODE_INPUT = true;
+ 	//USER_TOKEN_MANAGER = true;
+ 	//USER_CHAR_STREAM = true;
+}
+
+PARSER_BEGIN(plang_parser)
+package com.develope.plto.parser;
+import java.util.*;
+
+import com.develope.plto.thread.*;
+import com.develope.plto.util.*;
+
+public class plang_parser{
+	private Map<String, Object> Vcontainer = new HashMap<String, Object>();
+	private AppThread at;
+	private CoreThread ct;
+
+	private StringCalculator s_cal = new StringCalculator();
+
+	public plang_parser(plang_parserTokenManager tm,  AppThread at,  CoreThread ct)
+	{
+	  this(tm);
+	  this.at = at;
+	  this.ct = ct;	}
+	
+}
+PARSER_END(plang_parser)
+
+SKIP :
+{
+  " "
+| "\r"
+| "\t"
+}
+
+TOKEN:
+{
+  < C_GETFROMCOMP : "C_GETFROMCOMP" >
+}
+
+TOKEN:
+{  
+  < P_CALCULATE : "P_CALCULATE">
+}
+
+TOKEN:
+{
+  < S_PRINTTEXT : "S_PRINTTEXT" >}
+
+TOKEN:
+{
+  < ID :["a"-"z","A"-"Z","_"] (["a"-"z","A"-"Z","_","0"-"9"])* >
+  | < STRING : "{<<" ( ~[">","\\","\n","\r"] | "\\" ( [">","n","t","b","r","f","\\","\'","\""] | ( ["\n","\r"] | "\r\n")))* ">>}" >
+  | < EOL: "\n" >
+}
+
+boolean parseOneLine():
+{
+  String[] keyArray;}{
+  "<" cmd()
+  {
+    return true;  }
+  | <EOL>
+  {
+    return true;
+  }
+  | <EOF>
+  {
+    return false;  }}
+
+void cmd():
+{
+  Token a;
+  Object[] b;
+  String key;
+  Object value;
+}
+{
+  < C_GETFROMCOMP > ":" a=< ID > ">" b=source()
+  {
+    if(b[0].toString().equals("string"))
+    {
+      	key = a.toString();
+      	value = b[1].toString().substring(3, b[1].toString().length()-3);
+      	Vcontainer.put(key,value);
+    	System.out.println("to vcontainer\nkey: " + key + "  value: " + value);
+   	}
+    else if(b[0].toString().equals("variable"))
+	{
+	  	key = a.toString();
+	  	value = Vcontainer.get(b[1].toString());
+	  	Vcontainer.put(key,value);
+	  	System.out.println("to vcontainer\nkey: " + key + "  value: " + value);	}
+  }
+  | < P_CALCULATE > ":" a=< ID > ">" b=source()
+  {
+    if(b[0].toString().equals("string"))
+    {
+      	key = a.toString();
+      	String expression = b[1].toString().substring(3, b[1].toString().length()-3);
+      	value = s_cal.calculate(expression);
+      	Vcontainer.put(key,value);
+      	System.out.println(expression);
+    	System.out.println("to vcontainer\nkey: " + key + "  value: " + value);
+   	}
+    else if(b[0].toString().equals("variable"))
+	{
+	  	key = a.toString();
+	  	String expression = Vcontainer.get(b[1].toString()).toString();
+	  	System.out.println(expression);
+	  	value = s_cal.calculate(expression);
+	  	Vcontainer.put(key,value);
+	  	System.out.println("to vcontainer\nkey: " + key + "  value: " + value);
+	}
+  }
+  | < S_PRINTTEXT > ":" a=< ID > ">" b=source()
+  {
+    if(b[0].toString().equals("string"))
+    {
+      	key = a.toString();
+      	value = b[1].toString().substring(3, b[1].toString().length()-3);
+    	ct.putData(key,value);
+    	System.out.println("to core data set\nkey: " + a.toString() + "  value: " + value);
+   	}
+    else if(b[0].toString().equals("variable"))
+	{
+	  	key = a.toString();
+	  	value = Vcontainer.get(b[1].toString());
+	  	ct.putData(key,value);
+	  	System.out.println("to core data set\nkey: " + a.toString() + "  value: " + value);
+	}
+  }
+}
+
+Object[] source():
+{
+  Object a[] = new Object[2];
+}
+{
+  "{<>}" 
+  {  }
+  | a[1]=< STRING >
+  {
+    a[0]="string";
+ 	return a;  }
+  | "{<" a[1]=< ID > ">}"
+  {
+    a[0]="variable";
+	return a;  }
+}

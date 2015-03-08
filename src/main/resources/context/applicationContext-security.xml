@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<global-method-security secured-annotations="enabled" />
+
+	<http pattern="/resources/**" security="none"></http>
+	<http pattern="/js/**" security="none"></http>
+	<http pattern="/css/**" security="none"></http>
+	<http pattern="/images/**" security="none"></http>
+	
+	<http auto-config="true" use-expressions="true">
+		
+		<intercept-url pattern="/login" access="permitAll" requires-channel="https" />
+		<intercept-url pattern="/join" access="permitAll" requires-channel="https" />
+		<intercept-url pattern="/signup" access="permitAll" requires-channel="https" />
+		<intercept-url pattern="/modify" access="hasRole('ROLE_USER')" requires-channel="https" />
+		<intercept-url pattern="/modifyProc" access="hasRole('ROLE_USER')" requires-channel="https" />
+		<intercept-url pattern="/main" access="hasRole('ROLE_USER')" requires-channel="https" />
+		<intercept-url pattern="/check_email" access="permitAll" requires-channel="https"/>
+		<intercept-url pattern="/**" access="permitAll" requires-channel="https"/>
+		
+		<form-login login-page='/login' default-target-url='/main'
+			always-use-default-target='true' authentication-success-handler-ref="LoginSuccessHandler"
+			authentication-failure-handler-ref="LoginFailureHandler"
+			authentication-failure-url="/login" />
+			
+		<logout logout-success-url="/main" delete-cookies="JSESSIONID" />
+
+		<session-management>
+			<concurrency-control max-sessions="1" expired-url="/duplicated" />
+		</session-management>
+		<!-- <concurrent-session-control max-sessions="1" exception-if-maximum-exceeded="false" 
+			expired-url="/EgovCvplLogout.jsp" /> -->
+		<remember-me key="daSDAsdaSDsa" />
+		 <access-denied-handler ref="userDeniedHandler"/>
+		 
+	</http>
+	<!-- <authentication-manager> <authentication-provider> <user-service> <user 
+		name="guest" password="guest" authorities="ROLE_USER"/> </user-service> </authentication-provider> 
+		</authentication-manager> -->
+		
+		<beans:bean id="userDeniedHandler" class="com.develope.plto.service.UserDeniedHandler"></beans:bean>
+
+	<beans:bean id="memberService"
+		class="com.develope.plto.service.MemberDetailsService">
+		<beans:property name="memberDao" ref="memberDao"></beans:property>
+	</beans:bean>
+
+	<authentication-manager>
+		<authentication-provider user-service-ref="memberService">
+			<password-encoder ref="passwordEncoder">
+				<salt-source user-property="username" />
+			</password-encoder>
+		</authentication-provider>
+	</authentication-manager>
+
+	<beans:bean id="passwordEncoder"
+		class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+		<beans:constructor-arg name="strength" value="256"></beans:constructor-arg>
+	</beans:bean>
+
+	<beans:bean id="LoginSuccessHandler"
+		class="com.develope.plto.service.LoginSuccessHandler"></beans:bean>
+	<beans:bean id="LoginFailureHandler"
+		class="com.develope.plto.service.LoginFailureHandler"></beans:bean>
+
+</beans:beans>

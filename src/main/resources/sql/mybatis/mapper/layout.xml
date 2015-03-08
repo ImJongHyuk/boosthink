@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.develope.plto.mapper">
+
+	<select id="selectAllLayout" resultType="com.develope.plto.domain.Layout">
+		select * from tb_plto_layout
+	</select>
+	
+
+	<select id="selectLayout" parameterType="int" resultType="string">
+		select FD_LAYOUT from tb_plto_layout where FD_LAYOUT_ID=#{FD_LAYOUT_ID}
+	</select>
+	
+	<insert id="insert" parameterType="com.develope.plto.domain.Layout">
+		insert into tb_plto_layout values(#{FD_LAYOUT_ID},#{FD_LAYOUT})
+	</insert>
+	
+	<delete id="delete" parameterType="int">
+		delete from tb_plto_layout where FD_LAYOUT_ID = #{FD_LAYOUT_ID}
+	</delete>
+	
+	<update id="update" parameterType="com.develope.plto.domain.Layout">
+		update tb_plto_layout set FD_LAYOUT= #{FD_LAYOUT} where FD_LAYOUT_ID=#{FD_LAYOUT_ID}	
+	</update>
+</mapper>

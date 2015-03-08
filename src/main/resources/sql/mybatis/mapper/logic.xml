@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.develope.plto.mapper">
+
+	<select id="selectAllLogic" resultType="com.develope.plto.domain.Logic">
+		select * from tb_plto_logic
+	</select>
+	
+
+	<select id="selectLogic" parameterType="string" resultType="string">
+		select FD_LOGIC from tb_plto_logic where FD_LOGIC_ID=#{FD_LOGIC_ID}
+	</select>
+	
+	<insert id="insert" parameterType="com.develope.plto.domain.Logic">
+		insert into tb_plto_logic values(#{FD_LOGIC_ID},#{FD_LOGIC})
+	</insert>
+	
+	<delete id="delete" parameterType="string">
+		delete from tb_plto_logic where FD_LOGIC_ID = #{FD_LOGIC_ID}
+	</delete>
+	
+	<update id="update" parameterType="com.develope.plto.domain.Logic">
+		update tb_plto_logic set FD_LOGIC= #{FD_LOGIC} where FD_LOGIC_ID=#{FD_LOGIC_ID}	
+	</update>
+</mapper>

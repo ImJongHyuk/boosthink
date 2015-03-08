@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5 Canvas Test</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body>
+<canvas
+	id="processor" 
+	width=200
+	height=300
+	onmousemove="cnvs_getCoordinates(event)" 
+	onmouseout="cnvs_clearCoordinates()"
+	style="border:solid"
+	color = "#0fff00"
+	topShape = "1"
+	bottomShape = "1"
+	topNum = "1"
+	></canvas>
+	
+
+<BR>
+width : <input type="text" id="wd" value = 200 /><br>
+height : <input type="text" id="ht" value = 300 /><br>
+
+Input 개수 : <input type="text" id="topInput"/>
+Input모양 : 
+<select id = topShapeSelector>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select>
+<BR>
+Output 모양 : 
+<select id = bottomShapeSelector>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select>
+<BR>
+<input type="button" onClick="draw()" value="가버렷!"/><br>
+<input type="button" id="change" value="바꾼닷!"/><br>
+색상 입력 : <input type="text" id="color" value="#ff0000" /><br>
+<div id="xycoordinates"></div><!-- 좌표 표시 위치 -->
+
+<script type="text/javascript">
+
+
+$("#change").click(function()
+{
+	var w = $("#wd").val();
+	var h = $("#ht").val();
+	var c = $("#color").val();
+	var tS = $("#topShapeSelector :selected").val();
+	var bS = $("#bottomShapeSelector :selected").val();
+	var tN = $("#topInput").val();
+	changeValue(w,h,c,tS,bS,tN);
+}
+);
+
+function changeValue(width, height, color, topShape, bottomShape, topNum)
+{
+	$("#processor").attr("width",width);
+	$("#processor").attr("height",height);
+	$("#processor").attr("color",color);
+	$("#processor").attr("topShape",topShape);
+	$("#processor").attr("bottomShape",bottomShape);
+	$("#processor").attr("topNum",topNum);
+}
+
+function draw()
+{
+	var pro = $('#processor')[0].getContext('2d');	//2d로 이미지를 그리겠다
+	var height = $('canvas').attr('height');	//canvas의 height
+	var width = $('canvas').attr('width');	//canvas의 width
+	var t = 20;
+	
+	
+	var topNum = $('canvas').attr('topNum');
+	var topShape = $('canvas').attr('topShape');
+	var bottomShape = $('canvas').attr('bottomShape');
+	var color = $('canvas').attr('color');
+	
+	pro.fillStyle = color;		//색상 설정
+	pro.fillRect(0,t,width,height-2*t);		//몸통 사각형 생성
+	pro.fillRect(0, 0, width, t);			//top 색칠
+	
+	pro.fillStyle = "#ffffff";
+	switch(topShape){
+	case '1':
+		switch(topNum)
+		{
+		case '1':
+			pro.beginPath();
+			pro.arc(width/2, 0, t, 0, 1*Math.PI, false);	//draw top circle
+			break;
+		case '2':
+			pro.beginPath();
+			pro.arc(width/4, 0, t, 0, 1*Math.PI, false);	//draw top circle
+			pro.arc(3*width/4, 0, t, 0, 1*Math.PI, false);	//draw top circle	
+			break;
+		case '3':
+			pro.beginPath();
+			pro.arc(width/6, 0, t, 0, 1*Math.PI, false);	//draw top circle
+			pro.arc(3*width/6, 0, t, 0, 1*Math.PI, false);	//draw top circle	
+			pro.arc(5*width/6, 0, t, 0, 1*Math.PI, false);	//draw top circle
+			break;
+		}
+		pro.fill();
+		break;
+	case '2':
+		switch(topNum)
+		{
+		case '1':
+			pro.fillRect(width/2-t/2, 0, t, t);	//draw top rect
+			break;
+		case '2':
+			pro.fillRect(width/4-t/2, 0, t, t);	//draw top rect
+			pro.fillRect(3*width/4-t/2, 0, t, t);	//draw top rect
+			break;
+		case '3':
+			pro.fillRect(width/6-t/2, 0, t, t);	//draw top rect
+			pro.fillRect(3*width/6-t/2, 0, t, t);	//draw top rect
+			pro.fillRect(5*width/6-t/2, 0, t, t);	//draw top rect
+			break;
+		}
+		break;
+	case '3':
+		switch(topNum)
+		{
+		case '1':
+			pro.beginPath();   
+		    pro.moveTo(width/2,t);
+		    pro.lineTo(width/2-t/2,0);
+		    pro.lineTo(width/2+t/2,0);
+		    pro.closePath();
+			pro.fill();
+		    break;
+		case '2':
+			pro.beginPath();   
+		    pro.moveTo(width/4,t);
+		    pro.lineTo(width/4-t/2,0);
+		    pro.lineTo(width/4+t/2,0);
+		    pro.closePath();
+			pro.fill();
+			
+			pro.beginPath();   
+		    pro.moveTo(3*width/4,t);
+		    pro.lineTo(3*width/4-t/2,0);
+		    pro.lineTo(3*width/4+t/2,0);
+		    pro.closePath();
+			pro.fill();
+			break;
+		case '3':
+			pro.beginPath();   
+		    pro.moveTo(width/6,t);
+		    pro.lineTo(width/6-t/2,0);
+		    pro.lineTo(width/6+t/2,0);
+		    pro.closePath();
+			pro.fill();
+			
+			pro.beginPath();   
+		    pro.moveTo(3*width/6,t);
+		    pro.lineTo(3*width/6-t/2,0);
+		    pro.lineTo(3*width/6+t/2,0);
+		    pro.closePath();
+			pro.fill();
+			
+			pro.beginPath();   
+		    pro.moveTo(5*width/6,t);
+		    pro.lineTo(5*width/6-t/2,0);
+		    pro.lineTo(5*width/6+t/2,0);
+		    pro.closePath();
+			pro.fill();
+			break;
+		}
+		break;
+	}
+
+	pro.fillStyle = color;
+	pro.clearRect(0, height-t, width, t);	//bottom 색칠
+	switch(bottomShape)
+	{
+	case '1':
+		pro.beginPath();
+		pro.arc(width/2, height-t, t, 0, 1*Math.PI, false);	//draw top circle
+		pro.fill();		
+		break;
+	case '2':
+		pro.fillRect(width/2-t/2, height-t, t, t);	//draw top rect
+		break;
+	case '3':
+		pro.beginPath();
+	    pro.moveTo(width/2,height);
+	    pro.lineTo(width/2-t/2,height-t);
+	    pro.lineTo(width/2+t/2,height-t);
+	    pro.closePath();
+		pro.fill();
+		break;
+	}
+}
+
+//마우스 좌표 표시
+function cnvs_getCoordinates(e)
+{
+	x=e.clientX-10;
+	y=e.clientY-10;
+	document.getElementById("xycoordinates").innerHTML="&nbsp;&nbsp;좌표: (" + x + "," + y + ")";
+}
+//마우스 좌표 삭제
+function cnvs_clearCoordinates()
+{
+	document.getElementById("xycoordinates").innerHTML="";
+}
+</script>
+</body>
+</html>

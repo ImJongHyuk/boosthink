@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}/*레이어의 패딩, border등을 고려하지 않고 크기조절 가능 IE8이상 가능.*/
+
+body {
+	margin: 0; 
+	border: 0;
+	padding: 0;
+}
+
+div{
+	margin: 0;
+	border: 0;
+	padding: 0;
+	text-align: center;
+}
+
+table {
+	vertical-align: middle;
+	margin: 0 auto;
+}
