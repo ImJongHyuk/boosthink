@@ -214,6 +214,11 @@
         	<version>2.12.4</version>
         	<type>maven-plugin</type>
         </dependency>
+        <dependency>
+        	<groupId>net.java.dev.javacc</groupId>
+        	<artifactId>javacc</artifactId>
+        	<version>5.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -265,7 +270,7 @@
             	<version>2.6</version>
             	<executions>
             		<execution>
-            			<id>java/com/develope/plto/parser</id>
+            			<id>javaccr</id>
             			<goals>
             				<goal>javacc</goal>
             			</goals>	
