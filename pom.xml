@@ -265,14 +265,13 @@
             	<version>2.6</version>
             	<executions>
             		<execution>
-            			<id>javacc</id>
+            			<id>java/com/develope/plto/parser</id>
             			<goals>
             				<goal>javacc</goal>
             			</goals>	
             			<configuration>
-	            			<includes>
-	            				<include>**/*plang_parser.jj</include>
-	            			</includes>
+            				<lookAhead>2</lookAhead>
+           					<isStatic>false</isStatic>
             			</configuration>
             		</execution>
             	</executions>
