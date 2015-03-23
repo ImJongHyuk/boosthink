@@ -270,8 +270,9 @@
             				<goal>javacc</goal>
             			</goals>	
             			<configuration>
-            				<lookAhead>2</lookAhead>
-            				<isStatic>false</isStatic>
+	            			<includes>
+	            				<include>**/*plang_parser.jj</include>
+	            			</includes>
             			</configuration>
             		</execution>
             	</executions>
