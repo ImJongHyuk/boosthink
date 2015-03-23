@@ -224,10 +224,6 @@
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>
                 </configuration>
-                <properties>
-                    <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-                    <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-                </properties> 
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
