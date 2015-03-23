@@ -270,11 +270,12 @@
             	<version>2.6</version>
             	<executions>
             		<execution>
-            			<id>javaccr</id>
+            			<id>javacc</id>
             			<goals>
             				<goal>javacc</goal>
             			</goals>	
             			<configuration>
+            				<sourceDirectory>${basedir}/src/main/java/develope/plto/parser</sourceDirectory>
             				<lookAhead>2</lookAhead>
            					<isStatic>false</isStatic>
             			</configuration>
