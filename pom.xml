@@ -275,9 +275,8 @@
             				<goal>javacc</goal>
             			</goals>	
             			<configuration>
-            				<sourceDirectory>${basedir}/src/main/java/develope/plto/parser</sourceDirectory>
-            				<lookAhead>2</lookAhead>
-           					<isStatic>false</isStatic>
+            				<sourceDirectory>${basedir}/src/main/java/com/develope/plto/parser/</sourceDirectory>
+            				<outputDirectory>${basedir}/src/main/java/</outputDirectory>
             			</configuration>
             		</execution>
             	</executions>
