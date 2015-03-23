@@ -198,10 +198,6 @@
         </dependency>
     </dependencies>
     <build>
-        <properties>
-            <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-            <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-        </properties> 
         <plugins>
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
