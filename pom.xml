@@ -219,11 +219,6 @@
         	<artifactId>javacc</artifactId>
         	<version>5.0</version>
         </dependency>
-        <dependency>
-        	<groupId>org.sonatype.plexus</groupId>
-        	<artifactId>plexus-build-api</artifactId>
-        	<version>0.0.4</version>
-        </dependency>
     </dependencies>
     <build>
         <plugins>
