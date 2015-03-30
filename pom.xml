@@ -227,6 +227,11 @@
     </dependencies>
     <build>
         <plugins>
+        	<plugin>
+        		<groupId>org.codehaus.mojo</groupId>
+        		<artifactId>sonar-maven-plugin</artifactId>
+        		<version>2.5</version>
+        	</plugin>
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
                 <version>2.9</version>
