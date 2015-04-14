@@ -56,7 +56,7 @@
 			Layer0<img src='https://lh6.googleusercontent.com/-1w3ez285coE/VCl20HWodKI/AAAAAAAAADs/NY-ossJKAcE/h120/xbox.png' class="xbox">
 		</div>
 		<div class='userLayerSpace' id='userLayerSpace0'>
-			<div class='pComponent newComp section' id='section1'><img src="<c:url value='/resources/img/temperature.png'/>" class="pComponent newComp" id='temperature'></div>
+			
 			
 			<div class='pComponent newComp section' id='section3'><img src="<c:url value='/resources/img/tempdiff.png'/>" class="pComponent newComp" id='tempdiff'></div>
 			<div class='pComponent newComp section' id='section4'></div>
