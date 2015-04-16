@@ -1,9 +1,10 @@
 @CHARSET "UTF-8";
 
-body {
+body, div {
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	background-color: #4A705A;
 }
 
 header, nav, article, footer {
