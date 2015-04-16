@@ -11,8 +11,8 @@
 <link type="text/css" rel="stylesheet"
 	href="<c:url value='/resources/css/debug.css'/>" />
 <!-- 잘 안되면 동적 path로 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/style_1.css" /> -->
-<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="//code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
 <script src="<c:url value='/resources/js/login.js' />"></script>
 <!-- 잘 안되면 동적 path로 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-2.1.0.js"></script> -->
 </head>

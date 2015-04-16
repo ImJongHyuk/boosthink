@@ -14,8 +14,8 @@
 	href="<c:url value='/resources/css/make_app.css'/>" />
 
 <!-- JavaScript -->
-<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="//code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
 <script src="<c:url value='/resources/js/new_make_layout.js'/>"></script>
 
 </head>
