@@ -21,12 +21,16 @@
 </head>
 
 <body>
-<!-- 화면 맨 위 -->
+	<!-- 화면 맨 위 -->
 	<header id="make_app_header"> </header>
 	<!-- 화면 header 아래 네비게이터 -->
 	<nav id="make_app_nav"></nav>
-	<article id="make_app_main"></article>
 	
+	<!-- 메인 화면 -->
+	<article id="make_app_main">
+		<article class="widget"
+	</article>
+
 	<!-- 화면 오른쪽 -->
 	<article class="make_app_right" id="make_app_right_searchbar"></article>
 	<article class="make_app_right" id="make_app_right_button">
@@ -36,7 +40,7 @@
 		<article class="make_app_right_button" id="make_app_right_button_4"></article>
 	</article>
 	<article class="make_app_right" id="make_app_right_list"></article>
-	
+
 	<!-- 화면 아래쪽 -->
 	<footer id="make_app_footer">
 		<article class="make_app_footer" id="make_app_footer_1"></article>
