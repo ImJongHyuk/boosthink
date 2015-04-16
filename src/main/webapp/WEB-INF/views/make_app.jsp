@@ -28,7 +28,12 @@
 	
 	<!-- 메인 화면 -->
 	<article id="make_app_main">
-		<article class="widget"
+		<article class="make_app_main_widget" id="make_app_main_widget_1"></article>
+		<article class="make_app_main_widget" id="make_app_main_widget_2"></article>
+		<article class="make_app_main_widget" id="make_app_main_widget_3"></article>
+		<article class="make_app_main_widget" id="make_app_main_widget_4"></article>
+		<article class="make_app_main_widget" id="make_app_main_widget_5"></article>
+		<article class="make_app_main_widget" id="make_app_main_widget_6"></article>
 	</article>
 
 	<!-- 화면 오른쪽 -->
