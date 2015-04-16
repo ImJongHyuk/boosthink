@@ -1,253 +1,359 @@
 @CHARSET "UTF-8";
-/* For DEMO */
-.section{
-	position: absolute;
-	background-color: white;
-	width: 33.33%;
-	height: 50%;
-	border-color: #E0E0E0;
+
+/* make_app.jsp */
+header {
+	height: 8%;
+	width: 100%;
 }
 
-#section1 {
+nav {
+	top: 8%;
+	height: 4%;
+	width: 100%;
+}
+
+#make_app_main {
+	top: 12%;
+	height: 70%;
+	width: 84%;
+}
+
+footer {
+	top: 82%;
+	height: 18%;
+	width: 84%;
+}
+
+/* bottom */
+#make_app_footer_1 {
 	left: 0%;
-	top: 0%;
-	width: 66.66%;
-}
-
-#section2 {
-	left: 33.33%;
-	top: 0%;
-}
-
-#section3 {
-	left: 66.66%;
-	top: 0%;
-	height: 100%;	
-}
-
-#section4 {
-	left: 0%;
-	top: 50%;
-	
-}
-
-#section5 {
-	left: 33.33%;
-	top: 50%;
-}
-
-#section6 {
-	left: 66.66%;
-	top: 50%;	
-}
-
-#temperature {
-	width: 100%;
+	width: 21%;
 	height: 100%;
 }
 
-#tempdiff {
-	width: 100%;
+#make_app_footer_2 {
+	left: 21%;
+	width: 16%;
 	height: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-/* Need border adding (border: none;) */
-
-#componentList {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 15%;
+#make_app_footer_3 {
+	left: 37%;
+	width: 23%;
 	height: 100%;
 }
 
-#mainLayer {
-	position: absolute;
-	top: 0;
-	left: 15%;
-	width: 70%;
+#make_app_footer_4 {
+	left: 60%;
+	width: 24%;
 	height: 100%;
 }
 
-#variableList {
-	position: absolute;
-	top: 0;
-	left: 85%;
-	width: 15%;
-	height: 100%;
-}
+/* right */
 
-/* New Layer Creating Button */
-#createNewLayer {
-	position: absolute;
-	bottom: 5%;
-	right : 5%;
-	width: 12%;
-	height: 5%;
+.make_app_right{
+	left:84%;
+	width:16%;
 }
-
-/* translate_button */
-#translate_button {
-	position: absolute;
-	bottom: 5%;
-	right : 25%;
-	width: 15%;
-	height: 5%;
+#make_app_right_searchbar{
+	top:12%;
+	height:4%;	
 }
-
-/* Initializing First Layer */
-#userLayerTab0 {
-	position: absolute;
-	background-color: pink;
-	top: 5%;
-	left: 5%;
-	width: 10%;
-	height: 5%;	
+#make_app_right_button{
+	top:16%;
+	height:4%;
 }
-
-.userLayerTab {
-	text-align: left;
-}
-
-#userLayerSpace0 {
-	position: absolute;
-	background-color: #E0E0E0;
-	top: 10%;
-	left: 5%;
-	width: 90%;
-	height: 75%;
-	border: none;
-}
-
-.userLayerSpace {
-	border: none;
-}
-
-.xbox {
-	position: absolute;
-	right: 5%;
-}
-
-/* Logic style */
-#logicTop {
-	position: absolute;
-	background-color: #273238;
-	width: 100%;
-	height: 20%;
-	color: white;
-	text-align: center;
-    line-height: 200%;
-    font-size: 30px;
-    font-weight: bold;
-    font-style: italic;
-}
-
-#logicLLeft {
-	position: absolute;
-	background-color: #D0D0D0;/* e0e0e0 = 옅은 회색*/
+#make_app_right_list {
 	top: 20%;
-	width: 20%;
 	height: 80%;
 }
 
-#logicLeft {
-	position: absolute;
-	background-color: #A0A0A0;
-	top: 20%;
-	left: 20%;
-	width: 60%;
-	height: 80%;	
+.make_app_right_button{
+	height:100%;
+	width:25%;
+}
+#make_app_right_button_1{
+	left:0%;
+}
+#make_app_right_button_2{
+	left:25%;
+}
+#make_app_right_button_3{
+	left:50%;
+}
+#make_app_right_button_4{
+	left:75%;
 }
 
-#logicRight {
-	position: absolute;
-	background-color: #D0D0D0;
-	left: 80%;
-	top: 20%;
-	width: 20%;
-	height: 80%;
-}
-
-.logicComp {
-	width: 30%;
-	border: 2px;
-}
-/*
-.newLogicComp {
-	position: absolute;
-}*/
-
-.bNear {
-	border-bottom-style: solid;
-	border-bottom-color: white;
-}
-
-.bTop {
-	border-top-style: solid;
-	border-top-color: white;
-}
-
-.nearestTabR {
-	border-right-style: solid;
-	border-right-color: black;
-}
-
-.nearestTabL {
-	border-left-style: solid;
-	border-left-color: black;
-}
-
-.compGroup {
-	border: none;
-}
-
-/* Component List CSS (Right) Needed modifying */
-/*.pComponent {
-	width: 30%;
-}*//*
-#pButton, #pButtonOriginal {
-	position: absolute;
-	float: left;
-	top: 5%;
-	left: 35%;
-	width: 30%;
-}
-
-#pImage, #pImageOriginal {
-	position: absolute;
-	float: left;
-	top: 20%;
-	left: 35%;
-	width: 30%;
-}
-
-#pText, #pTextOriginal {
-	position: absolute;
-	float: left;
-	top: 35%;
-	left: 35%;
-	width: 30%;	
-}
-
-#pFixedtext {
-	position: absolute;
-	float: left;
-	top: 5%;
-	left: 50%;
-	width: 30%;
-}*/
 
 
 
 
 
 
+
+
+
+/* /* For DEMO */
+*
+/
+/* .section{ */
+/* 	position: absolute; */
+/* 	background-color: white; */
+/* 	width: 33.33%; */
+/* 	height: 50%; */
+/* 	border-color: #E0E0E0; */
+/* } */
+
+/* #section1 { */
+/* 	left: 0%; */
+/* 	top: 0%; */
+/* 	width: 66.66%; */
+/* } */
+
+/* #section2 { */
+/* 	left: 33.33%; */
+/* 	top: 0%; */
+/* } */
+
+/* #section3 { */
+/* 	left: 66.66%; */
+/* 	top: 0%; */
+/* 	height: 100%;	 */
+/* } */
+
+/* #section4 { */
+/* 	left: 0%; */
+/* 	top: 50%; */
+
+/* } */
+
+/* #section5 { */
+/* 	left: 33.33%; */
+/* 	top: 50%; */
+/* } */
+
+/* #section6 { */
+/* 	left: 66.66%; */
+/* 	top: 50%;	 */
+/* } */
+
+/* #temperature { */
+/* 	width: 100%; */
+/* 	height: 100%; */
+/* } */
+
+/* #tempdiff { */
+/* 	width: 100%; */
+/* 	height: 100%; */
+/* } */
+
+/* /* Need border adding (border: none;) */
+ 
+*
+/
+
+/* #componentList { */
+/* 	position: absolute; */
+/* 	top: 0; */
+/* 	left: 0; */
+/* 	width: 15%; */
+/* 	height: 100%; */
+/* } */
+
+/* #mainLayer { */
+/* 	position: absolute; */
+/* 	top: 0; */
+/* 	left: 15%; */
+/* 	width: 70%; */
+/* 	height: 100%; */
+/* } */
+
+/* #variableList { */
+/* 	position: absolute; */
+/* 	top: 0; */
+/* 	left: 85%; */
+/* 	width: 15%; */
+/* 	height: 100%; */
+/* } */
+
+/* /* New Layer Creating Button */
+ 
+*
+/
+/* #createNewLayer { */
+/* 	position: absolute; */
+/* 	bottom: 5%; */
+/* 	right : 5%; */
+/* 	width: 12%; */
+/* 	height: 5%; */
+/* } */
+
+/* /* translate_button */
+ 
+*
+/
+/* #translate_button { */
+/* 	position: absolute; */
+/* 	bottom: 5%; */
+/* 	right : 25%; */
+/* 	width: 15%; */
+/* 	height: 5%; */
+/* } */
+
+/* /* Initializing First Layer */
+ 
+*
+/
+/* #userLayerTab0 { */
+/* 	position: absolute; */
+/* 	background-color: pink; */
+/* 	top: 5%; */
+/* 	left: 5%; */
+/* 	width: 10%; */
+/* 	height: 5%;	 */
+/* } */
+
+/* .userLayerTab { */
+/* 	text-align: left; */
+/* } */
+
+/* #userLayerSpace0 { */
+/* 	position: absolute; */
+/* 	background-color: #E0E0E0; */
+/* 	top: 10%; */
+/* 	left: 5%; */
+/* 	width: 90%; */
+/* 	height: 75%; */
+/* 	border: none; */
+/* } */
+
+/* .userLayerSpace { */
+/* 	border: none; */
+/* } */
+
+/* .xbox { */
+/* 	position: absolute; */
+/* 	right: 5%; */
+/* } */
+
+/* /* Logic style */
+ 
+*
+/
+/* #logicTop { */
+/* 	position: absolute; */
+/* 	background-color: #273238; */
+/* 	width: 100%; */
+/* 	height: 20%; */
+/* 	color: white; */
+/* 	text-align: center; */
+/*     line-height: 200%; */
+/*     font-size: 30px; */
+/*     font-weight: bold; */
+/*     font-style: italic; */
+/* } */
+
+/* #logicLLeft { */
+/* 	position: absolute; */
+/* 	background-color: #D0D0D0;e0e0e0 = 옅은 회색 */
+/* 	top: 20%; */
+/* 	width: 20%; */
+/* 	height: 80%; */
+/* } */
+
+/* #logicLeft { */
+/* 	position: absolute; */
+/* 	background-color: #A0A0A0; */
+/* 	top: 20%; */
+/* 	left: 20%; */
+/* 	width: 60%; */
+/* 	height: 80%;	 */
+/* } */
+
+/* #logicRight { */
+/* 	position: absolute; */
+/* 	background-color: #D0D0D0; */
+/* 	left: 80%; */
+/* 	top: 20%; */
+/* 	width: 20%; */
+/* 	height: 80%; */
+/* } */
+
+/* .logicComp { */
+/* 	width: 30%; */
+/* 	border: 2px; */
+/* } */
+/* /* */
+/* .newLogicComp { */
+/* 	position: absolute; */
+/* }*/
+ 
+*
+/
+
+/* .bNear { */
+/* 	border-bottom-style: solid; */
+/* 	border-bottom-color: white; */
+/* } */
+
+/* .bTop { */
+/* 	border-top-style: solid; */
+/* 	border-top-color: white; */
+/* } */
+
+/* .nearestTabR { */
+/* 	border-right-style: solid; */
+/* 	border-right-color: black; */
+/* } */
+
+/* .nearestTabL { */
+/* 	border-left-style: solid; */
+/* 	border-left-color: black; */
+/* } */
+
+/* .compGroup { */
+/* 	border: none; */
+/* } */
+
+/* /* Component List CSS (Right) Needed modifying */
+ 
+*
+/
+/* /*.pComponent { */
+/* 	width: 30%; */
+/* }*/
+/* #pButton, #pButtonOriginal { */
+/* 	position: absolute; */
+/* 	float: left; */
+/* 	top: 5%; */
+/* 	left: 35%; */
+/* 	width: 30%; */
+/* } */
+
+/* #pImage, #pImageOriginal { */
+/* 	position: absolute; */
+/* 	float: left; */
+/* 	top: 20%; */
+/* 	left: 35%; */
+/* 	width: 30%; */
+/* } */
+
+/* #pText, #pTextOriginal { */
+/* 	position: absolute; */
+/* 	float: left; */
+/* 	top: 35%; */
+/* 	left: 35%; */
+/* 	width: 30%;	 */
+/* } */
+
+/* #pFixedtext { */
+/* 	position: absolute; */
+/* 	float: left; */
+/* 	top: 5%; */
+/* 	left: 50%; */
+/* 	width: 30%; */
+/* }*/
+ 
+*
+/
