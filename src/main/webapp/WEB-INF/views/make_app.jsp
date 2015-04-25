@@ -53,7 +53,9 @@
 		<article class="make_app_right_button" id="make_app_right_button_3">로직</article>
 		<article class="make_app_right_button" id="make_app_right_button_4">섭스</article>
 	</article>
-	<article class="make_app_right" id="make_app_right_list"></article>
+	<article class="make_app_right" id="make_app_right_list">
+		<article class="right_comp"><img src="http://i.imgur.com/1bM7xRK.jpg" /></article>
+	</article>
 
 	<!-- 화면 아래쪽 -->
 	<footer id="make_app_footer">

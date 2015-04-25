@@ -7,19 +7,20 @@
 <link type="text/css" rel="stylesheet"
 	href="<c:url value='/resources/css/base.css'/>" />
 <link type="text/css" rel="stylesheet"
-	href="<c:url value='/resources/css/login.css'/>" />
-<link type="text/css" rel="stylesheet"
 	href="<c:url value='/resources/css/debug.css'/>" />
+<link type="text/css" rel="stylesheet"
+	href="<c:url value='/resources/css/login.css'/>" />
+	
 <!-- 잘 안되면 동적 path로 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/style_1.css" /> -->
+<!-- JavaScript -->
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="//code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
 <script src="<c:url value='/resources/js/login.js' />"></script>
 <!-- 잘 안되면 동적 path로 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-2.1.0.js"></script> -->
 </head>
+<!-- 로드시 Fade in -->
 <body onload="fIn()">
-	<div id="layer_top">
-		<p>PLTO</p>
-	</div>
+		<header id="login_plto_logo"><img src="http://i.imgur.com/T2qCras.png" /></header>
 	<div id="layer_middle">
 		<div id="layer_middle_left">
 			<a>&lt;</a>
@@ -45,6 +46,5 @@
 		</div>
 		<div id="layer_middle_right">&gt;</div>
 	</div>
-	<div id="layer_bottom">걍 fixed 시험해봄</div>
 </body>
 </html>

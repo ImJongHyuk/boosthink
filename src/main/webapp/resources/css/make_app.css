@@ -24,93 +24,110 @@ footer {
 	width: 84%;
 }
 
+.right_comp{
+	width: 100%;
+	text-align:center;
+	border: none;
+}
+
 /* main */
-.make_app_main_widget{
-	height:16%;
-	width:16%;
+.make_app_main_widget {
+	height: 16%;
+	width: 16%;
 }
-#make_app_main_widget_1{
-	top:16%;
+
+#make_app_main_widget_1 {
+	top: 16%;
 	left: 5%;
 }
-#make_app_main_widget_2{
-	top:16%;
-	left: 21%;	
-}
-#make_app_main_widget_3{
-	top:16%;	
-	left: 37%;
-	
-}
-#make_app_main_widget_4{
-	top:32%;
-	left: 5%;
-	
-}
-#make_app_main_widget_5{
-	top:32%;
+
+#make_app_main_widget_2 {
+	top: 16%;
 	left: 21%;
-	
 }
-#make_app_main_widget_6{
-	top:32%;	
+
+#make_app_main_widget_3 {
+	top: 16%;
 	left: 37%;
-	
 }
-#make_app_main_widget_7{
-	top:16%;
+
+#make_app_main_widget_4 {
+	top: 32%;
+	left: 5%;
+}
+
+#make_app_main_widget_5 {
+	top: 32%;
+	left: 21%;
+}
+
+#make_app_main_widget_6 {
+	top: 32%;
+	left: 37%;
+}
+
+#make_app_main_widget_7 {
+	top: 16%;
 	left: 53%;
-	height:32%;
-	width:13%;	
+	height: 32%;
+	width: 13%;
 }
-#make_app_main_widget_8{
-	top:16%;
+
+#make_app_main_widget_8 {
+	top: 16%;
 	left: 66%;
-	height:32%;
-	width:13%;
-	
+	height: 32%;
+	width: 13%;
 }
 
 /* right */
-.make_app_right{
-	left:84%;
-	width:16%;
+.make_app_right {
+	left: 84%;
+	width: 16%;
 }
-#make_app_right_searchbar{
-	top:12%;
-	height:4%;	
+
+#make_app_right_searchbar {
+	top: 12%;
+	height: 4%;
 }
-#make_app_right_button{
-	top:16%;
-	height:4%;
+
+#make_app_right_button {
+	top: 16%;
+	height: 4%;
 }
+
 #make_app_right_list {
 	top: 20%;
 	height: 80%;
 }
 
-.make_app_right_button{
-	height:100%;
-	width:25%;
+.make_app_right_button {
+	height: 100%;
+	width: 25%;
 }
-#make_app_right_button_1{
-	left:0%;
+
+#make_app_right_button_1 {
+	left: 0%;
 }
-#make_app_right_button_2{
-	left:25%;
+
+#make_app_right_button_2 {
+	left: 25%;
 }
-#make_app_right_button_3{
-	left:50%;
+
+#make_app_right_button_3 {
+	left: 50%;
 }
-#make_app_right_button_4{
-	left:75%;
+
+#make_app_right_button_4 {
+	left: 75%;
 }
 
 /* bottom */
-.make_app_footer{
+.make_app_footer {
 	top: 0%;
-	height:100%;
+	height: 100%;
 }
+
 #make_app_footer_1 {
 	left: 0%;
 	width: 27%;
