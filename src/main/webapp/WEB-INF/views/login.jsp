@@ -10,7 +10,7 @@
 	href="<c:url value='/resources/css/debug.css'/>" />
 <link type="text/css" rel="stylesheet"
 	href="<c:url value='/resources/css/login.css'/>" />
-	
+
 <!-- 잘 안되면 동적 path로 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/style_1.css" /> -->
 <!-- JavaScript -->
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -20,12 +20,10 @@
 </head>
 <!-- 로드시 Fade in -->
 <body onload="fIn()">
-		<header id="login_plto_logo"><img src="http://i.imgur.com/T2qCras.png" /></header>
-	<div id="layer_middle">
-		<div id="layer_middle_left">
-			<a>&lt;</a>
-		</div>
-		<div id="layer_middle_center">
+	<img src="http://i.imgur.com/T2qCras.png" id="login_plto_logo"/>
+	<article id="layer_middle_left">&lt;</article>
+
+	<!-- 
 			<form id="login_form"
 				action="<c:url value="j_spring_security_check" />" method="post">
 				<table id="login_table">
@@ -39,12 +37,36 @@
 					</tr>
 				</table>
 			</form>
-			<P>수평정렬은 블록의 사이즈가 딱 정해져 있지 않으면 못하는듯. 찾아보면 거의 수동으로 하네.</P>
-			<a id="GoEdit">GoEdit</a><BR> <a id="GoAppList">GoAppList</a><BR>
-			<a id="GoTest">Soek's test</a>
+			 -->
 
-		</div>
-		<div id="layer_middle_right">&gt;</div>
-	</div>
+
+
+		<img src="http://i.imgur.com/hVITmbR.png" id="label_id" />
+		<input id="input_id" type="text">
+		
+		<img src="http://i.imgur.com/hDRavWc.png" id="label_pw"/>
+		<input id="input_pw" type="text">
+		
+		<input type="button" value="login" id="login_button">
+		
+		<article id="sign_up"> sign up </article>
+		
+		<article id="login_with"> login_with </article>
+	
+
+
+
+
+
+
+
+	<a id="GoEdit">GoEdit</a>
+	<BR>
+	<a id="GoAppList">GoAppList</a>
+	<BR>
+	<a id="GoTest">Soek's test</a>
+
+
+	<article id="layer_middle_right">&gt;</article>
 </body>
 </html>
