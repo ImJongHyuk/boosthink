@@ -103,6 +103,12 @@ void cmd():
   Object value;
 }
 {
+  /*b = Object[2]   < > 1st case String, << >> Variable */
+  //1. source()를 통해 b[1]의 값으로 string, variable을 구분함
+  //2. 구분된 값은 b[0]에 string or variable로 기록됨
+  //3. 구분자로 입력된 값은 b[1]에 기록되게 되어있음
+  //4. a는 <ID >에 있는 값으로 target을 의미함  (맞나?)
+  //5. 
   < C_GETFROMCOMP > ":" a=< ID > ">" b=source()
   {
     if(b[0].toString().equals("string"))
