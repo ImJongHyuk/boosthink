@@ -2,82 +2,78 @@
 
 /* make_app.jsp */
 header {
-	height: 8%;
+	background-color: #f1f1f1;
+	border: 0px;
+	height: 100px;
 	width: 100%;
 }
 
 nav {
-	top: 8%;
-	height: 4%;
+	background-color: #e8d1ff;
+	border: 0px;
+	top: 100px;
+	height: 50px;
 	width: 100%;
 }
 
 #make_app_main {
-	top: 12%;
-	height: 70%;
+	top: 150px;
+	height: 605px;
 	width: 84%;
+	border: 0px;
+	background-color: #ffffff;
 }
 
 footer {
-	top: 82%;
-	height: 18%;
+	top: 755px;
+	height: 200px;
 	width: 84%;
+	border: 0px;
 }
 
 .right_comp{
 	width: 100%;
-	text-align:center;
+	text-align: left;
 	border: none;
 }
 
 /* main */
 .make_app_main_widget {
-	height: 16%;
+	background-color: #f1f1f1;
+	height: 200px;
 	width: 16%;
 }
 
 #make_app_main_widget_1 {
-	top: 16%;
-	left: 5%;
+	top: 200px;
+	left: 10%;
 }
 
 #make_app_main_widget_2 {
-	top: 16%;
-	left: 21%;
+	top: 200px;
+	left: 26%;
 }
 
 #make_app_main_widget_3 {
-	top: 16%;
-	left: 37%;
+	top: 200px;
+	left: 42%;
+	height: 400px;
 }
 
 #make_app_main_widget_4 {
-	top: 32%;
-	left: 5%;
+	top: 200px;
+	left: 58%;
+	height: 400px;
 }
 
 #make_app_main_widget_5 {
-	top: 32%;
-	left: 21%;
+	top: 400px;
+	left: 10%;
 }
 
 #make_app_main_widget_6 {
-	top: 32%;
-	left: 37%;
-}
-
-#make_app_main_widget_7 {
-	top: 16%;
-	left: 53%;
-	height: 32%;
-	width: 13%;
-}
-
-#make_app_main_widget_8 {
-	top: 16%;
-	left: 66%;
-	height: 32%;
-	width: 13%;
+	top: 400px;
+	left: 26%;
 }
 
 /* right */
@@ -87,18 +83,22 @@ footer {
 }
 
 #make_app_right_searchbar {
-	top: 12%;
-	height: 4%;
+	top: 150px;
+	height: 30px;
+	border: 0px;
 }
 
 #make_app_right_button {
-	top: 16%;
-	height: 4%;
+	top: 180px;
+	height: 30px;
+	border: 0px;
 }
 
 #make_app_right_list {
-	top: 20%;
-	height: 80%;
+	top: 210px;
+	height: 745px;
+	border: 0px;
+	background-color: #ffffff;
 }
 
 .make_app_right_button {
@@ -108,42 +108,54 @@ footer {
 
 #make_app_right_button_1 {
 	left: 0%;
+	background-color: #fee8cf;
 }
 
 #make_app_right_button_2 {
 	left: 25%;
+	background-color: #ffdeda;
+	border-left: 0px;
 }
 
 #make_app_right_button_3 {
 	left: 50%;
+	background-color: #ffffd1;
+	border-left: 0px;
 }
 
 #make_app_right_button_4 {
 	left: 75%;
+	background-color: #cfd0ff;
+	border-left: 0px;
 }
 
 /* bottom */
 .make_app_footer {
-	top: 0%;
+	top: 0px;
 	height: 100%;
+	border: 0px;
 }
 
 #make_app_footer_1 {
 	left: 0%;
 	width: 27%;
+	background-color: #f1f1f1;
 }
 
 #make_app_footer_2 {
 	left: 27%;
 	width: 19%;
+	background-color: #f2f4d0;
 }
 
 #make_app_footer_3 {
 	left: 46%;
 	width: 27%;
+	background-color: #fdddd0;
 }
 
 #make_app_footer_4 {
 	left: 73%;
 	width: 27%;
+	background-color: #f1f1f1;
 }
