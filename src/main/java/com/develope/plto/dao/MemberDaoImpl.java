@@ -52,7 +52,7 @@ public class MemberDaoImpl implements MemberDao {
 	/*특정한 멤버정보로 해당되는 멤버를 찾는 메소드*/
 	@Override
 	public Member selectMember(Member member) {
-		Member user = (Member) sqlSession.selectOne("selectMember_m", member);
+		Member user = (Member) sqlSession.selectOne("selectMember_m", member); 
 		return user;
 	}
 

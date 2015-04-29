@@ -185,6 +185,7 @@ public class AppThread extends Thread{
 		boardDaoImpl= (BoardDaoImpl) con.getBean("boardDao");
 	}
 
+	/* appThread의 runnable method  */
 	@Override
 	public void run()
 	{	
@@ -208,7 +209,7 @@ public class AppThread extends Thread{
 			if(!end_flag)
 			{
 				plang = (String)inq.poll();
-				System.out.println(th_id+" 실행된다!!");
+				System.out.println(th_id+" is started");
 				System.out.println("입력된 플랭: "+plang);
 				
 				
@@ -219,6 +220,7 @@ public class AppThread extends Thread{
 					plang_parserTokenManager tokenMan = new plang_parserTokenManager(charStream);
 					
 					//파서로 앱쓰레드와 코어쓰레드를 인자로 함께 보낸다(파서에서 사용하기 때문)
+					// <tokenManager, AppThread, CoreThread>
 					plang_parser parser = new plang_parser(tokenMan, this, ct);
 					
 					while(parser.parseOneLine()){}

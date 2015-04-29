@@ -21,7 +21,7 @@ public class SemanticDaoImpl implements SemanticDao{
 		return list;
 	}
 	
-	/*List<SemanticList>������ ������ �Է¹޾� Json������ ��Ʈ������ ��ȯ �� ��ȯ*/
+	/*List<SemanticList> to Json form*/
 	@Override
 	public String toJson(List<SemanticList> list){
 		String retStr="";
@@ -47,7 +47,7 @@ public class SemanticDaoImpl implements SemanticDao{
 		return retStr;
 	}
 	
-	/*List<SemanticList>������ ������ �Է¹޾� xml������ ��Ʈ������ ��ȯ �� ��ȯ*/
+	/*List<SemanticList> to Xml form*/
 	@Override
 	public String toXml(List<SemanticList> list){
 		String retStr="";
