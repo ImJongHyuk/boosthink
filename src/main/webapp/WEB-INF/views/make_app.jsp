@@ -3,7 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>어플제작</title>
+<!-- bootstrap CDN -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 <!-- Style Sheet -->
 <link type="text/css" rel="stylesheet"
@@ -22,7 +29,20 @@
 
 <body>
 	<!-- 화면 맨 위 -->
-	<header id="make_app_header">Play Together</header>
+	<header id="make_app_header">
+		<div class="container-fluid">    
+		  <div class="row">
+		    <div class="col-sm-6">
+		      <p align="left" style="margin: 10px 0px 0px 20px; font-family: Buxton Sketch; font-size: 50px; color: #707070;"><b>Play Together</b></p>
+		    </div>
+		    <div class="col-sm-6">
+		      <p align="right" style="margin: 15px 100px 0px 0px"><img width="70px" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246785_megaphone.png" id=""/>&nbsp;&nbsp;&nbsp;<img width="70px" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246775_chat.png" id=""/>&nbsp;&nbsp;&nbsp;<img width="70px" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246779_profle.png" id=""/></p>
+		    </div>
+		  </div>
+		</div>
+		
+		
+	</header>
 	<!-- 화면 header 아래 네비게이터 -->
 	<nav id="make_app_nav"></nav>
 
@@ -33,17 +53,13 @@
 	<article class="make_app_main_widget" id="make_app_main_widget_2">widget
 		2</article>
 	<article class="make_app_main_widget" id="make_app_main_widget_3">widget
-		3</article>
+		3(작업목록)</article>
 	<article class="make_app_main_widget" id="make_app_main_widget_4">widget
-		4</article>
+		4(최근활동)</article>
 	<article class="make_app_main_widget" id="make_app_main_widget_5">widget
 		5</article>
 	<article class="make_app_main_widget" id="make_app_main_widget_6">widget
 		6</article>
-	<article class="make_app_main_widget" id="make_app_main_widget_7">widget
-		7(작업목록)</article>
-	<article class="make_app_main_widget" id="make_app_main_widget_8">widget
-		8(최근활동)</article>
 
 	<!-- 화면 오른쪽 -->
 	<article class="make_app_right" id="make_app_right_searchbar"></article>
@@ -54,7 +70,13 @@
 		<article class="make_app_right_button" id="make_app_right_button_4">섭스</article>
 	</article>
 	<article class="make_app_right" id="make_app_right_list">
-		<article class="right_comp"><img src="http://i.imgur.com/1bM7xRK.jpg" /></article>
+		<article class="right_comp">
+			<p style="font-size: 25px; margin-top: 10px;"><img width="50px" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245498_Santa-128.png" id=""/>&nbsp;&nbsp;&nbsp;강호동</p>
+			<hr style="color: b0b0b0; background-color:#b0b0b0; height: 1px; border: none; margin-top: 10px; margin-bottom: 10px;" />
+			<p style="font-size: 25px;"><img width="50px" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246466_Batman-128.png" id=""/>&nbsp;&nbsp;&nbsp;유재석</p>
+			<hr style="color: b0b0b0; background-color:#b0b0b0; height: 1px; border: none; margin-top: 10px; margin-bottom: 10px;" />
+		</article>
+		
 	</article>
 
 	<!-- 화면 아래쪽 -->
