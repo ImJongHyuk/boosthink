@@ -30,9 +30,9 @@
 <body>
 	<!-- 화면 맨 위 -->
 	<header id="make_app_header">
-		      <div align="left" style="float: left; width: 10%; height: 100%; margin: 10px 0px 0px 20px;"><img width="170%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/play_together.png" id=""/></div>
+		      <p align="left" style="float: left; width: 15%; height: 100%; margin: 10px 0px 0px 20px; vertical-align: middle;"><img height="70%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/play_together.png" id=""/></p>
 		
-		      <div align="right" style="float: right; width: 20%; margin: 10px 50px 0px 0px;"><img width="20%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246785_megaphone.png" id=""/>&nbsp;&nbsp;&nbsp;<img width="20%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246775_chat.png" id=""/>&nbsp;&nbsp;&nbsp;<img width="20%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246779_profle.png" id=""/></div>
+		      <p align="right" style="float: right; width: 40%; height: 100%; margin: 10px 8% 0px 0px;"><img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246785_megaphone.png" id=""/>&nbsp;&nbsp;&nbsp;<img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246775_chat.png" id=""/>&nbsp;&nbsp;&nbsp;<img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246779_profle.png" id=""/></p>
 		
 		
 		
