@@ -23,23 +23,17 @@
 <!-- JavaScript -->
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="//code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
-<script src="<c:url value='/resources/js/new_make_layout.js'/>"></script>
+<script src="<c:url value='/resources/js/make_app.js'/>"></script>
 
 </head>
 
 <body>
 	<!-- 화면 맨 위 -->
 	<header id="make_app_header">
-		<div class="container-fluid">    
-		  <div class="row">
-		    <div class="col-sm-6">
-		      <p align="left" style="margin: 10px 0px 0px 20px; font-family: Buxton Sketch; font-size: 50px; color: #707070;"><b>Play Together</b></p>
-		    </div>
-		    <div class="col-sm-6">
-		      <p align="right" style="margin: 15px 100px 0px 0px"><img width="70px" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246785_megaphone.png" id=""/>&nbsp;&nbsp;&nbsp;<img width="70px" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246775_chat.png" id=""/>&nbsp;&nbsp;&nbsp;<img width="70px" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246779_profle.png" id=""/></p>
-		    </div>
-		  </div>
-		</div>
+		      <div align="left" style="float: left; width: 10%; height: 100%; margin: 10px 0px 0px 20px;"><img width="170%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/play_together.png" id=""/></div>
+		
+		      <div align="right" style="float: right; width: 20%; margin: 10px 50px 0px 0px;"><img width="20%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246785_megaphone.png" id=""/>&nbsp;&nbsp;&nbsp;<img width="20%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246775_chat.png" id=""/>&nbsp;&nbsp;&nbsp;<img width="20%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246779_profle.png" id=""/></div>
+		
 		
 		
 	</header>
@@ -47,19 +41,20 @@
 	<nav id="make_app_nav"></nav>
 
 	<!-- 메인 화면 -->
-	<article id="make_app_main"></article>
-	<article class="make_app_main_widget" id="make_app_main_widget_1">widget
-		1</article>
-	<article class="make_app_main_widget" id="make_app_main_widget_2">widget
-		2</article>
-	<article class="make_app_main_widget" id="make_app_main_widget_3">widget
-		3(작업목록)</article>
-	<article class="make_app_main_widget" id="make_app_main_widget_4">widget
-		4(최근활동)</article>
-	<article class="make_app_main_widget" id="make_app_main_widget_5">widget
-		5</article>
-	<article class="make_app_main_widget" id="make_app_main_widget_6">widget
-		6</article>
+	<article id="make_app_main">
+		<article class="make_app_main_widget" id="make_app_main_widget_1">widget
+			1</article>
+		<article class="make_app_main_widget" id="make_app_main_widget_2">widget
+			2</article>
+		<article class="make_app_main_widget" id="make_app_main_widget_3">widget
+			3(작업목록)</article>
+		<article class="make_app_main_widget" id="make_app_main_widget_4">widget
+			4(최근활동)</article>
+		<article class="make_app_main_widget" id="make_app_main_widget_5">widget
+			5</article>
+		<article class="make_app_main_widget" id="make_app_main_widget_6">widget
+			6</article>
+	</article>
 
 	<!-- 화면 오른쪽 -->
 	<article class="make_app_right" id="make_app_right_searchbar"></article>
@@ -71,9 +66,9 @@
 	</article>
 	<article class="make_app_right" id="make_app_right_list">
 		<article class="right_comp">
-			<p style="font-size: 25px; margin-top: 10px;"><img width="50px" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245498_Santa-128.png" id=""/>&nbsp;&nbsp;&nbsp;강호동</p>
+			<p style="font-size: 25px; margin-top: 10px;"><img width="20%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245498_Santa-128.png" id=""/>&nbsp;&nbsp;&nbsp;강호동</p>
 			<hr style="color: b0b0b0; background-color:#b0b0b0; height: 1px; border: none; margin-top: 10px; margin-bottom: 10px;" />
-			<p style="font-size: 25px;"><img width="50px" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246466_Batman-128.png" id=""/>&nbsp;&nbsp;&nbsp;유재석</p>
+			<p style="font-size: 25px;"><img width="20%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246466_Batman-128.png" id=""/>&nbsp;&nbsp;&nbsp;유재석</p>
 			<hr style="color: b0b0b0; background-color:#b0b0b0; height: 1px; border: none; margin-top: 10px; margin-bottom: 10px;" />
 		</article>
 		
