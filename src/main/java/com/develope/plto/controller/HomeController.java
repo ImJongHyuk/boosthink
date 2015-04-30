@@ -33,7 +33,7 @@ import com.develope.plto.thread.*;
 public class HomeController extends HttpServlet {
 
 	// 서버를 시작하자마자 appthread를 관리하는 쓰레드를 작동시킴
-	// 추후 init 메소드로 변경할 부분
+	// 추후 init 메소드로 변경할 부분임
 	private LifeCycleThread lct = new LifeCycleThread();
 
 	@Autowired

@@ -13,7 +13,8 @@ import com.develope.plto.domain.*;
 import com.develope.plto.parser.*;
 
 
-
+// @Todo Queue -> 타입 포함하는 Queue<>로 변경
+// String <-> JSONObject
 public class AppThread extends Thread{
 	private boolean s_flag = false;//앱이 최소 한번 실행이 되었는지 확인하는 플래그
 	private boolean end_flag = false;//쓰레드 종료를 알리는 플래그
