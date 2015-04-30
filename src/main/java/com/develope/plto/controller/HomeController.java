@@ -212,6 +212,12 @@ public class HomeController extends HttpServlet {
 		return "app_list";
 	}
 
+	/** app list response for javascript */
+	@RequestMapping(value = "/get_dynamic_app_list_all", method = RequestMethod.GET)
+	public @ResponseBody List<Layout> getDynamicAppListAll(){
+		List<Layout> list = layoutDaoImpl.selectAllLayout();
+		return list;
+	}
 	//회원가입 요청을 get방식으로 할 때는 메인페이지로 이동
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public String signupProc_get(Locale locale, Model model,HttpServletRequest request)
