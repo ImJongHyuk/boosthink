@@ -30,6 +30,7 @@ public class ScriptMapperDaoImplTest {
 
 	@Test
 	public void testSelectPlangId() {
+		//기존에 있는 아이디로 테스트하는 것이기 때문에 컬럼이 없는 지금은 failtest임
 		assertEquals("asd",scriptMapperDaoImpl.selectPlangId(1891051753, "123"));
 	}
 
