@@ -32,7 +32,7 @@
 	<header id="make_app_header">
 		      <p align="left" style="float: left; width: 15%; height: 100%; margin: 10px 0px 0px 20px; vertical-align: middle;"><img height="70%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/play_together.png" id=""/></p>
 		
-		      <p align="right" style="float: right; width: 40%; height: 100%; margin: 10px 8% 0px 0px;"><img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246785_megaphone.png" id=""/>&nbsp;&nbsp;&nbsp;<img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246775_chat.png" id=""/>&nbsp;&nbsp;&nbsp;<img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246779_profle.png" id=""/></p>
+		      <p align="right" style="float: right; width: 40%; height: 100%; margin: 0.5% 8% 0px 0px;"><img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246785_megaphone.png" id=""/>&nbsp;&nbsp;&nbsp;<img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246775_chat.png" id=""/>&nbsp;&nbsp;&nbsp;<img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246779_profle.png" id=""/></p>
 		
 		
 		
