@@ -234,7 +234,7 @@ public class HomeController extends HttpServlet {
 
 		return list;
 	}
-	
+
 	/**  logic cpnt list response for js */
 	@RequestMapping(value = "/get_dynamic_all_logic_cpnt.ajax", method = RequestMethod.GET)
 	public @ResponseBody List<Map<LogicCpnt, ImageSrc>> getDynamicAllLogicCpnt()
@@ -244,7 +244,7 @@ public class HomeController extends HttpServlet {
 
 		return list;
 	}	
-	
+
 	/**  members list response for js */
 	@RequestMapping(value = "/get_dynamic_all_members.ajax", method = RequestMethod.GET)
 	public @ResponseBody List<Member> getDynamicAllMembers()

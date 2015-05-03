@@ -44,7 +44,7 @@
 		<property name="transactionManager" ref="transactionManager_b" />
 	</bean>
 
-	<bean id="imageSrcDao" class="com.develope.plto.dao.ImageSrcImpl">
+	<bean id="imageSrcDao" class="com.develope.plto.dao.ImageSrcDaoImpl">
 		<property name="sqlSession" ref="sqlSession_b" />
 	</bean>
 	
