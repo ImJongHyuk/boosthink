@@ -218,6 +218,23 @@ public class HomeController extends HttpServlet {
 		List<Layout> list = layoutDaoImpl.selectAllLayout();
 		return list;
 	}
+	
+	
+	@RequestMapping(value = "/get_dynamic_all_layout_cpnt.ajax", method = RequestMethod.GET)
+	public @ResponseBody List<LayoutCpnt> getDynamicAllLayoutCpnt(@RequestParam(value="category")long category, HttpSession session)
+	{
+		List<LayoutCpnt> list = layoutCpntDaoImpl.selectAllLayoutCpnt();
+
+		return list;
+	}
+	
+	@RequestMapping(value = "/get_dynamic_all_logic_cpnt.ajax", method = RequestMethod.GET)
+	public @ResponseBody List<LogicCpnt> getDynamicAllLogicCpnt(@RequestParam(value="category")long category, HttpSession session)
+	{
+		List<LogicCpnt> list = logicCpntDaoImpl.selectAllLogicCpnt();
+
+		return list;
+	}	
 	//회원가입 요청을 get방식으로 할 때는 메인페이지로 이동
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public String signupProc_get(Locale locale, Model model,HttpServletRequest request)
@@ -390,6 +407,8 @@ public class HomeController extends HttpServlet {
 		return obj.toJSONString();
 	}
 
+	
+	
 	@RequestMapping(value = "/getLogicComponentsByCategory.ajax", method = RequestMethod.POST)
 	public @ResponseBody String getLogicComponentsByCategory(@RequestParam(value="category")long category, HttpSession session)
 	{
