@@ -2,23 +2,23 @@ package com.develope.plto.domain;
 
 
 public class LayoutCpnt {
-	private String FD_ID;
+	private int FD_ID;
 	private String FD_SRC;
 	private int FD_CATEGORY;
 	private int FD_IMG_SRC;
 
 	public LayoutCpnt(){}
-	public LayoutCpnt(String FD_ID, String FD_SRC, int FD_CATEGORY)
+	public LayoutCpnt(int FD_ID, String FD_SRC, int FD_CATEGORY)
 	{
 		this.FD_ID = FD_ID;
 		this.FD_SRC = FD_SRC;
 		this.FD_CATEGORY = FD_CATEGORY;
 	}
 
-	public String getID() {
+	public int getID() {
 		return FD_ID;
 	}
-	public void setID(String iD) {
+	public void setID(int iD) {
 		FD_ID = iD;
 	}
 	public String getSRC() {
