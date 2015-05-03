@@ -213,7 +213,7 @@ public class HomeController extends HttpServlet {
 	}
 
 	/** app list response for javascript */
-	@RequestMapping(value = "/get_dynamic_app_list_all", method = RequestMethod.GET)
+	@RequestMapping(value = "/get_dynamic_app_list_all.ajax", method = RequestMethod.GET)
 	public @ResponseBody List<Layout> getDynamicAppListAll(){
 		List<Layout> list = layoutDaoImpl.selectAllLayout();
 		return list;
@@ -221,7 +221,7 @@ public class HomeController extends HttpServlet {
 	
 	
 	@RequestMapping(value = "/get_dynamic_all_layout_cpnt.ajax", method = RequestMethod.GET)
-	public @ResponseBody List<LayoutCpnt> getDynamicAllLayoutCpnt(@RequestParam(value="category")long category, HttpSession session)
+	public @ResponseBody List<LayoutCpnt> getDynamicAllLayoutCpnt()
 	{
 		List<LayoutCpnt> list = layoutCpntDaoImpl.selectAllLayoutCpnt();
 
@@ -229,12 +229,22 @@ public class HomeController extends HttpServlet {
 	}
 	
 	@RequestMapping(value = "/get_dynamic_all_logic_cpnt.ajax", method = RequestMethod.GET)
-	public @ResponseBody List<LogicCpnt> getDynamicAllLogicCpnt(@RequestParam(value="category")long category, HttpSession session)
+	public @ResponseBody List<LogicCpnt> getDynamicAllLogicCpnt()
 	{
 		List<LogicCpnt> list = logicCpntDaoImpl.selectAllLogicCpnt();
 
 		return list;
 	}	
+	
+	@RequestMapping(value = "/get_dynamic_all_members.ajax", method = RequestMethod.GET)
+	public @ResponseBody List<Member> getDynamicAllMembers()
+	{
+		List<Member> list = memberDaoImpl.selectAllMember();
+
+		return list;
+	}	
+		
+	
 	//회원가입 요청을 get방식으로 할 때는 메인페이지로 이동
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public String signupProc_get(Locale locale, Model model,HttpServletRequest request)
