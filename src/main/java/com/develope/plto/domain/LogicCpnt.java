@@ -5,6 +5,7 @@ public class LogicCpnt {
 	private String FD_ID;
 	private String FD_SRC;
 	private int FD_CATEGORY;
+	private int FD_IMG_SRC;
 
 	public LogicCpnt(){}
 	public LogicCpnt(String FD_ID, String FD_SRC, int FD_CATEGORY)
@@ -32,4 +33,10 @@ public class LogicCpnt {
 	public void setCATEGORY(int cATEGORY) {
 		FD_CATEGORY = cATEGORY;
 	}
+	public int getImgSRC(){
+		return FD_IMG_SRC;
+	}
+	public void setImgSrc(int iMgSrc){
+		FD_IMG_SRC = iMgSrc;
+	}	
 }

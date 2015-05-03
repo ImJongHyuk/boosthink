@@ -5,6 +5,7 @@ public class LayoutCpnt {
 	private String FD_ID;
 	private String FD_SRC;
 	private int FD_CATEGORY;
+	private int FD_IMG_SRC;
 
 	public LayoutCpnt(){}
 	public LayoutCpnt(String FD_ID, String FD_SRC, int FD_CATEGORY)
@@ -22,7 +23,7 @@ public class LayoutCpnt {
 	}
 	public String getSRC() {
 		return FD_SRC;
-	}
+	}	
 	public void setSRC(String sRC) {
 		FD_SRC = sRC;
 	}
@@ -31,5 +32,11 @@ public class LayoutCpnt {
 	}
 	public void setCATEGORY(int cATEGORY) {
 		FD_CATEGORY = cATEGORY;
+	}
+	public int getImgSRC(){
+		return FD_IMG_SRC;
+	}
+	public void setImgSrc(int iMgSrc){
+		FD_IMG_SRC = iMgSrc;
 	}
 }

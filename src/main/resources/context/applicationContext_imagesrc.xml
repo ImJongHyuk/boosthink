@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	
+	
+	<bean id="propertyPlaceholderConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath:configuration/imagesrc_config.properties</value>
+		</property>
+	</bean>
+
+	<bean id="dataSource_b" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+	<!-- SQL세션 팩토리를 만들고 데이터 소스와 매퍼 로케이션을 프로퍼티로 전달 -->
+	<bean id="sqlSessionFactory_b" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource_b" />
+		<property name="mapperLocations" value="classpath*:sql/mybatis/mapper/imagesrc.xml" />
+	</bean>
+	<!-- SQL세션을 만들고 위에서 만든 세션 팩토리 빈을 프로퍼티로 전달 -->
+	<bean id="sqlSession_b" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory_b" />
+	</bean>
+
+	<bean id="transactionManager_b"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource_b" />
+	</bean>
+
+	<bean id="transactionTemplate_b"
+		class="org.springframework.transaction.support.TransactionTemplate">
+		<property name="transactionManager" ref="transactionManager_b" />
+	</bean>
+
+	<bean id="imageSrcDao" class="com.develope.plto.dao.ImageSrcImpl">
+		<property name="sqlSession" ref="sqlSession_b" />
+	</bean>
+	
+	<bean id="homeController" class="com.develope.plto.controller.HomeController"></bean>
+</beans>

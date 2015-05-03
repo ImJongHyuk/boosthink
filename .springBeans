@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beansProjectDescription>
 	<version>1</version>
-	<pluginVersion><![CDATA[3.5.1.201404300732-RELEASE]]></pluginVersion>
+	<pluginVersion><![CDATA[3.6.4.201503051146-RELEASE]]></pluginVersion>
 	<configSuffixes>
 		<configSuffix><![CDATA[xml]]></configSuffix>
 	</configSuffixes>
@@ -11,13 +11,16 @@
 	</configs>
 	<autoconfigs>
 		<config>src/main/resources/context/applicationContext-logics.xml</config>
-		<config>src/main/resources/context/applicationContext_sessions.xml</config>
-		<config>src/main/webapp/WEB-INF/spring/root-context.xml</config>
-		<config>src/main/resources/context/applicationContext_scriptmapper.xml</config>
-		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
 		<config>src/main/resources/context/applicationContext_board.xml</config>
-		<config>src/main/resources/context/applicationContext-layouts.xml</config>
+		<config>src/main/resources/context/applicationContext_layoutcpnt.xml</config>
 		<config>src/main/resources/context/applicationContext_semantic.xml</config>
+		<config>src/main/resources/context/applicationContext-layouts.xml</config>
+		<config>src/main/resources/context/applicationContext-security.xml</config>
+		<config>src/main/resources/context/applicationContext_scriptmapper.xml</config>
+		<config>src/main/resources/context/applicationContext_sessions.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
+		<config>src/main/resources/context/applicationContext-logiccpnt.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/root-context.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>

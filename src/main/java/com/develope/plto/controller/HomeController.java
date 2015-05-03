@@ -43,6 +43,9 @@ public class HomeController extends HttpServlet {
 	private MemberServiceImpl memberServiceImpl;
 
 	@Autowired
+	private ImageSrcDaoImpl imageSrcDaoImpl; 
+	
+	@Autowired
 	private SessionDaoImpl sessionDaoImpl;
 
 	@Autowired
@@ -65,6 +68,9 @@ public class HomeController extends HttpServlet {
 
 	@Autowired
 	private LogicCpntDaoImpl logicCpntDaoImpl;
+	
+	@Autowired
+	private CpntImageMapperImpl cpntImageMapperImpl;
 
 	//"/login"으로 이동
 	@RequestMapping(value = "/", method = {RequestMethod.GET,RequestMethod.POST})
@@ -219,23 +225,27 @@ public class HomeController extends HttpServlet {
 		return list;
 	}
 	
-	
+	/**  layout cpnt list response for js */
 	@RequestMapping(value = "/get_dynamic_all_layout_cpnt.ajax", method = RequestMethod.GET)
-	public @ResponseBody List<LayoutCpnt> getDynamicAllLayoutCpnt()
+	public @ResponseBody List<Map<LayoutCpnt, ImageSrc>> getDynamicAllLayoutCpnt()
 	{
-		List<LayoutCpnt> list = layoutCpntDaoImpl.selectAllLayoutCpnt();
+		List<LayoutCpnt> lcList = layoutCpntDaoImpl.selectAllLayoutCpnt();
+		List<Map<LayoutCpnt, ImageSrc>> list = cpntImageMapperImpl.setMappedLayoutImage(lcList);
 
 		return list;
 	}
 	
+	/**  logic cpnt list response for js */
 	@RequestMapping(value = "/get_dynamic_all_logic_cpnt.ajax", method = RequestMethod.GET)
-	public @ResponseBody List<LogicCpnt> getDynamicAllLogicCpnt()
+	public @ResponseBody List<Map<LogicCpnt, ImageSrc>> getDynamicAllLogicCpnt()
 	{
-		List<LogicCpnt> list = logicCpntDaoImpl.selectAllLogicCpnt();
+		List<LogicCpnt> lcList = logicCpntDaoImpl.selectAllLogicCpnt();
+		List<Map<LogicCpnt, ImageSrc>> list = cpntImageMapperImpl.setMappedLogicImage(lcList);
 
 		return list;
 	}	
 	
+	/**  members list response for js */
 	@RequestMapping(value = "/get_dynamic_all_members.ajax", method = RequestMethod.GET)
 	public @ResponseBody List<Member> getDynamicAllMembers()
 	{
@@ -243,8 +253,7 @@ public class HomeController extends HttpServlet {
 
 		return list;
 	}	
-		
-	
+
 	//회원가입 요청을 get방식으로 할 때는 메인페이지로 이동
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public String signupProc_get(Locale locale, Model model,HttpServletRequest request)
