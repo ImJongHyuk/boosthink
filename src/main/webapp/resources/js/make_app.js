@@ -17,10 +17,10 @@ $(document).on("click", ".make_app_right_button", function(e){
 	else{
 		/* 현재 make_app_main의 정보 저장(현재 make_app_state 상태와 연관되어 저장) */
 		save_make_app_state(make_app_state);
-		
+
 		/* 현재 make_app_main과 make_app_right를 비움 */
 		remove_make_app_state(make_app_state);
-		
+
 		/* 클릭한 버튼에 따른 정보를 make_app_main과 make_app_right_list에 출력 후 make_app_state 변경 */
 		load_make_app_state($(this));
 	}
@@ -68,23 +68,23 @@ function save_make_app_state(make_app_state){
 /* 현재 make_app_main과 make_app_right를 비움 */
 function remove_make_app_state(make_app_state){
 	$("#make_app_main").children().remove();
+	$("#make_app_right_list").children().remove();
 }
 
 /* 클릭한 버튼에 따른 정보를 make_app_main과 make_app_right_list에 출력 후 make_app_state 변경 */
 function load_make_app_state(change_app_state){
-	/*
-	h1>Apps!</h1>
-	<table  width="600" >
-		<tr>
-			<th>앱 번호</th>
-		</tr>
-		<c:forEach var="layout" items="${list}">
-			<tr>
-				<td><a class="app" id=${layout.id}>${layout.id}</a></td>
-			</tr>
-		</c:forEach>
-	</table>
-	*/
+	$.ajax({
+		url: "get_dynamic_app_list_all",
+		type: "GET",
+		success: function(json){
+			for(var i=0; i<json.length;i++){
+				$("#make_app_right_list").append("<article id = '"+json[i].id+"'style='position: relative; width: 100%; text-align:center'>"+json[i]["id"]);
+			}
+		},
+	error: function(err){
+		alert("ERROR?");
+	}
+	});
 	/* make_app_state 변경 */
 	make_app_state = change_app_state;
 }
