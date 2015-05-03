@@ -73,18 +73,73 @@ function remove_make_app_state(make_app_state){
 
 /* 클릭한 버튼에 따른 정보를 make_app_main과 make_app_right_list에 출력 후 make_app_state 변경 */
 function load_make_app_state(change_app_state){
-	$.ajax({
-		url: "get_dynamic_app_list_all",
-		type: "GET",
-		success: function(json){
-			for(var i=0; i<json.length;i++){
-				$("#make_app_right_list").append("<article id = '"+json[i].id+"'style='position: relative; width: 100%; text-align:center'>"+json[i]["id"]);
+	var button_id = change_app_state.attr('id');
+	/* User List */
+	if(button_id == "make_app_right_button_1"){
+		$.ajax({
+			url: "get_dynamic_all_members.ajax",
+			type: "GET",
+			success: function(json){
+				for(var i=0; i<json.length;i++){
+					$("#make_app_right_list").append("<article id = '"+json[i].email+"'style='position: relative; width: 100%; text-align:center'>"+json[i].email);
+				}
+			},
+			error: function(err){
+				alert("BUTTON1_ERROR?");
 			}
-		},
-	error: function(err){
-		alert("ERROR?");
+		});
 	}
-	});
+	/* Layout Component List */
+	else if(button_id == "make_app_right_button_2"){
+		$.ajax({
+			url: "get_dynamic_all_layout_cpnt.ajax",
+			type: "GET",
+			success: function(json){
+				console.log(JSON.stringify(json));
+				console.log(json);
+				console.log(json[0]);
+				console.log(json[1]);
+				console.log(json[0].id);
+				console.log(json[1].id);
+				for(var i=0; i<json.length;i++){
+					$("#make_app_right_list").append("<article id = '"+json[i].id+"'style='position: relative; width: 100%; text-align:center'>"+json[i].id);
+				}
+			},
+			error: function(err){
+				alert("BUTTON2_ERROR?");
+			}
+		});		
+	}
+	/* Logic Component List */
+	else if(button_id == "make_app_right_button_3"){
+		$.ajax({
+			url: "get_dynamic_all_logic_cpnt.ajax",
+			type: "GET",
+			success: function(json){
+				for(var i=0; i<json.length;i++){
+					$("#make_app_right_list").append("<article id = '"+json[i].id+"'style='position: relative; width: 100%; text-align:center'>"+json[i].id);
+				}
+			},
+			error: function(err){
+				alert("BUTTON3_ERROR?");
+			}
+		});		
+	}
+	/* Service Application List */
+	else if(button_id == "make_app_right_button_4"){
+		$.ajax({
+			url: "get_dynamic_app_list_all.ajax",
+			type: "GET",
+			success: function(json){
+				for(var i=0; i<json.length;i++){
+					$("#make_app_right_list").append("<article id = '"+json[i].id+"'style='position: relative; width: 100%; text-align:center'>"+json[i].id);
+				}
+			},
+			error: function(err){
+				alert("BUTTON4_ERROR?");
+			}
+		});
+	}
 	/* make_app_state 변경 */
 	make_app_state = change_app_state;
 }
