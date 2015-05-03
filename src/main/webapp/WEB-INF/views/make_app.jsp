@@ -84,32 +84,32 @@
 	</article>
 	<article class="make_app_right" id="make_app_right_list">
 		<article class="right_comp">
-			<article class="make_app_right_list_row" style="width: 100%; height: 10%;">
+			<article class="make_app_right_list_row" style="width: 100%; height: 10%; border: 0px;">
 				<article class="make_app_right_list_column_1" style="width: 25%; height:100%; border: 0px;">
-					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245498_Santa-128.png" id=""/>
+					<img style="margin-top: 20%; width: 80%; height: auto; max-height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245498_Santa-128.png" id=""/>
 				</article>
 				<article class="make_app_right_list_column_2" style="width: 25%; height:100%; left: 25%; border: 0px;">
-					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245463_Man-1-128.png" id=""/>
+					<img style="margin-top: 20%; width: 80%; height: auto; max-height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245463_Man-1-128.png" id=""/>
 				</article>
 				<article class="make_app_right_list_column_3" style="width: 25%; height:100%; left: 50%; border: 0px;">
-					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246433_Road-Worker-1-128.png" id=""/>
+					<img style="margin-top: 20%; width: 80%; height: auto; max-height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246433_Road-Worker-1-128.png" id=""/>
 				</article>
 				<article class="make_app_right_list_column_4" style="width: 25%; height:100%; left: 75%; border: 0px;">
-					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246466_Batman-128.png" id=""/>
+					<img style="margin-top: 20%; width: 80%; height: auto; max-height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246466_Batman-128.png" id=""/>
 				</article>
 			</article>
-			<article class="make_app_right_list_row" style="width: 100%; height: 10%; top: 10%;">
+			<article class="make_app_right_list_row" style="width: 100%; height: 10%; border: 0px; top: 10%;">
 				<article class="make_app_right_list_column_1" style="width: 25%; height:100%; border: 0px;">
-					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245493_Farmer-128.png" id=""/>
+					<img style="margin-top: 20%; width: 80%; height: auto; max-height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245493_Farmer-128.png" id=""/>
 				</article>
 				<article class="make_app_right_list_column_2" style="width: 25%; height:100%; left: 25%; border: 0px;">
-					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246433_Road-Worker-1-128.png" id=""/>
+					<img style="margin-top: 20%; width: 80%; height: auto; max-height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246433_Road-Worker-1-128.png" id=""/>
 				</article>
 				<article class="make_app_right_list_column_3" style="width: 25%; height:100%; left: 50%; border: 0px;">
-					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245498_Santa-128.png" id=""/>
+					<img style="margin-top: 20%; width: 80%; height: auto; max-height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245498_Santa-128.png" id=""/>
 				</article>
 				<article class="make_app_right_list_column_4" style="width: 25%; height:100%; left: 75%; border: 0px;">
-					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245463_Man-1-128.png" id=""/>
+					<img style="margin-top: 20%; width: 80%; height: auto; max-height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245463_Man-1-128.png" id=""/>
 				</article>
 			</article>			
 		</article>
