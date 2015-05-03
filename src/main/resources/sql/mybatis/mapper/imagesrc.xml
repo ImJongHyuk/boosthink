@@ -6,7 +6,7 @@
 <mapper namespace="com.develope.plto.mapper">
 	
 	<select id="selectImageSrcById" resultType="com.develope.plto.domain.ImageSrc" >
-		select * from tb_board where FD_IMAGE_ID=#{FD_IMAGE_ID}
+		select * from tb_image_src where FD_IMAGE_ID=#{FD_IMAGE_ID}
 	</select>
 	
 </mapper>
