@@ -19,32 +19,36 @@ public class CpntImageMapperImpl implements CpntImageMapper {
 	private ImageSrcDaoImpl imageSrcDaoImpl;
 	
 	@Override
-	public List<Map<LogicCpnt, ImageSrc>> setMappedLogicImage(List<LogicCpnt> logicCpnts) {
+	public List<CpntWithImageSrc> setMappedLogicImage(List<LogicCpnt> logicCpnts) {
 
-		List<Map<LogicCpnt, ImageSrc>> list = new ArrayList<Map<LogicCpnt, ImageSrc>>();
+		//List<Map<LogicCpnt, ImageSrc>> list = new ArrayList<Map<LogicCpnt, ImageSrc>>();
+		List<CpntWithImageSrc> list = new ArrayList<CpntWithImageSrc>();
 		
 		System.out.println("logicCpnts size: "+logicCpnts.size());
 		for(int i=0, n=logicCpnts.size();i<n;i++){
 			LogicCpnt tLogic = logicCpnts.get(i);
 			ImageSrc tImgSrc = imageSrcDaoImpl.selectImageSrcById(logicCpnts.get(i).getImgSRC());
-			Map<LogicCpnt, ImageSrc> tMap = new HashMap<>();
-			tMap.put(tLogic, tImgSrc);
-			list.add(tMap);
+			CpntWithImageSrc tList = new CpntWithImageSrc();
+			tList.setImageSrc(tImgSrc);
+			tList.setLogicCpnt(tLogic);
+			list.add(tList);
 		}
 		return list;
 	}
 
 	@Override
-	public List<Map<LayoutCpnt, ImageSrc>> setMappedLayoutImage(List<LayoutCpnt> layoutCpnts) {
+	public List<CpntWithImageSrc> setMappedLayoutImage(List<LayoutCpnt> layoutCpnts) {
 		
-		List<Map<LayoutCpnt, ImageSrc>> list = new ArrayList<Map<LayoutCpnt, ImageSrc>>();
+		//List<Map<LayoutCpnt, ImageSrc>> list = new ArrayList<Map<LayoutCpnt, ImageSrc>>();
+		List<CpntWithImageSrc> list = new ArrayList<CpntWithImageSrc>();
 		
 		for(int i=0,n=layoutCpnts.size();i<n;i++){
 			LayoutCpnt tLayout = layoutCpnts.get(i);
 			ImageSrc tImgSrc = imageSrcDaoImpl.selectImageSrcById(layoutCpnts.get(i).getImgSRC());
-			Map<LayoutCpnt, ImageSrc> tMap = new HashMap<>();
-			tMap.put(tLayout, tImgSrc);
-			list.add(tMap);
+			CpntWithImageSrc tList = new CpntWithImageSrc();
+			tList.setImageSrc(tImgSrc);
+			tList.setLayoutCpnt(tLayout);
+			list.add(tList);
 		}
 		return list;
 	}

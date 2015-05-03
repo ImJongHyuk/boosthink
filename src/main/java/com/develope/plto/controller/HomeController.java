@@ -227,20 +227,20 @@ public class HomeController extends HttpServlet {
 	
 	/**  layout cpnt list response for js */
 	@RequestMapping(value = "/get_dynamic_all_layout_cpnt.ajax", method = RequestMethod.GET)
-	public @ResponseBody List<Map<LayoutCpnt, ImageSrc>> getDynamicAllLayoutCpnt()
+	public @ResponseBody List<CpntWithImageSrc> getDynamicAllLayoutCpnt()
 	{
 		List<LayoutCpnt> lcList = layoutCpntDaoImpl.selectAllLayoutCpnt();
-		List<Map<LayoutCpnt, ImageSrc>> list = cpntImageMapperImpl.setMappedLayoutImage(lcList);
+		List<CpntWithImageSrc> list = cpntImageMapperImpl.setMappedLayoutImage(lcList);
 
 		return list;
 	}
 
 	/**  logic cpnt list response for js */
 	@RequestMapping(value = "/get_dynamic_all_logic_cpnt.ajax", method = RequestMethod.GET)
-	public @ResponseBody List<Map<LogicCpnt, ImageSrc>> getDynamicAllLogicCpnt()
+	public @ResponseBody List<CpntWithImageSrc> getDynamicAllLogicCpnt()
 	{
 		List<LogicCpnt> lcList = logicCpntDaoImpl.selectAllLogicCpnt();
-		List<Map<LogicCpnt, ImageSrc>> list = cpntImageMapperImpl.setMappedLogicImage(lcList);
+		List<CpntWithImageSrc> list = cpntImageMapperImpl.setMappedLogicImage(lcList);
 
 		return list;
 	}	
