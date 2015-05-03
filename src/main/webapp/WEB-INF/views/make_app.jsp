@@ -25,35 +25,53 @@
 <script src="//code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
 <script src="<c:url value='/resources/js/make_app.js'/>"></script>
 
+<script src="<c:url value='/resources/js/modernizr.custom.79639.js'/>"></script>
+
 </head>
 
 <body>
 	<!-- 화면 맨 위 -->
 	<header id="make_app_header">
-		      <p align="left" style="float: left; width: 15%; height: 100%; margin: 10px 0px 0px 20px; vertical-align: middle;"><img height="70%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/play_together.png" id=""/></p>
-		
-		      <p align="right" style="float: right; width: 40%; height: 100%; margin: 0.5% 8% 0px 0px;"><img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246785_megaphone.png" id=""/>&nbsp;&nbsp;&nbsp;<img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246775_chat.png" id=""/>&nbsp;&nbsp;&nbsp;<img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246779_profle.png" id=""/></p>
-		
-		
-		
+		<p align="left" style="float: left; width: 15%; height: 100%; margin: 10px 0px 0px 20px; vertical-align: middle;">
+			<img height="70%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/play_together.png" id=""/>
+		</p>
+		<p align="right" style="float: right; width: 40%; height: 100%; margin: 0.5% 8% 0px 0px;">
+			<img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246785_megaphone.png" id=""/>
+			&nbsp;&nbsp;&nbsp;<img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246775_chat.png" id=""/>
+			&nbsp;&nbsp;&nbsp;<img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246779_profle.png" id=""/>
+		</p>
 	</header>
 	<!-- 화면 header 아래 네비게이터 -->
 	<nav id="make_app_nav"></nav>
 
 	<!-- 메인 화면 -->
+	
+	
 	<article id="make_app_main">
+		<article class="ch-item ch-img" style="top: 10%; left: 10%;">
+			<article class="ch-info">
+				<h3>Add<br> widget</h3>
+			</article>
+		</article>
+		<article class="ch-item ch-img" style="top: 10%; left: 26%;">
+			<article class="ch-info">
+				<h3>Add<br> widget</h3>
+			</article>
+		</article>
 		<article class="make_app_main_widget" id="make_app_main_widget_1">widget
-			1</article>
-		<article class="make_app_main_widget" id="make_app_main_widget_2">widget
-			2</article>
-		<article class="make_app_main_widget" id="make_app_main_widget_3">widget
 			3(작업목록)</article>
-		<article class="make_app_main_widget" id="make_app_main_widget_4">widget
+		<article class="make_app_main_widget" id="make_app_main_widget_2">widget
 			4(최근활동)</article>
-		<article class="make_app_main_widget" id="make_app_main_widget_5">widget
-			5</article>
-		<article class="make_app_main_widget" id="make_app_main_widget_6">widget
-			6</article>
+		<article class="ch-item ch-img" style="top: 40%; left: 10%;">
+			<article class="ch-info">
+				<h3>Add<br> widget</h3>
+			</article>
+		</article>
+		<article class="ch-item ch-img" style="top: 40%; left: 26%;">
+			<article class="ch-info">
+				<h3>Add<br> widget</h3>
+			</article>
+		</article>
 	</article>
 
 	<!-- 화면 오른쪽 -->
@@ -66,10 +84,34 @@
 	</article>
 	<article class="make_app_right" id="make_app_right_list">
 		<article class="right_comp">
-			<p style="font-size: 25px; margin-top: 10px;"><img width="20%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245498_Santa-128.png" id=""/>&nbsp;&nbsp;&nbsp;강호동</p>
-			<hr style="color: b0b0b0; background-color:#b0b0b0; height: 1px; border: none; margin-top: 10px; margin-bottom: 10px;" />
-			<p style="font-size: 25px;"><img width="20%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246466_Batman-128.png" id=""/>&nbsp;&nbsp;&nbsp;유재석</p>
-			<hr style="color: b0b0b0; background-color:#b0b0b0; height: 1px; border: none; margin-top: 10px; margin-bottom: 10px;" />
+			<article class="make_app_right_list_row" style="width: 100%; height: 10%;">
+				<article class="make_app_right_list_column_1" style="width: 25%; height:100%; border: 0px;">
+					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245498_Santa-128.png" id=""/>
+				</article>
+				<article class="make_app_right_list_column_2" style="width: 25%; height:100%; left: 25%; border: 0px;">
+					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245463_Man-1-128.png" id=""/>
+				</article>
+				<article class="make_app_right_list_column_3" style="width: 25%; height:100%; left: 50%; border: 0px;">
+					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246433_Road-Worker-1-128.png" id=""/>
+				</article>
+				<article class="make_app_right_list_column_4" style="width: 25%; height:100%; left: 75%; border: 0px;">
+					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246466_Batman-128.png" id=""/>
+				</article>
+			</article>
+			<article class="make_app_right_list_row" style="width: 100%; height: 10%; top: 10%;">
+				<article class="make_app_right_list_column_1" style="width: 25%; height:100%; border: 0px;">
+					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245493_Farmer-128.png" id=""/>
+				</article>
+				<article class="make_app_right_list_column_2" style="width: 25%; height:100%; left: 25%; border: 0px;">
+					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246433_Road-Worker-1-128.png" id=""/>
+				</article>
+				<article class="make_app_right_list_column_3" style="width: 25%; height:100%; left: 50%; border: 0px;">
+					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245498_Santa-128.png" id=""/>
+				</article>
+				<article class="make_app_right_list_column_4" style="width: 25%; height:100%; left: 75%; border: 0px;">
+					<img style="margin-top: 20%; width: auto; height: 80%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430245463_Man-1-128.png" id=""/>
+				</article>
+			</article>			
 		</article>
 		
 	</article>
