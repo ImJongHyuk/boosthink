@@ -21,7 +21,7 @@ public class ImageSrcDaoImpl implements ImageSrcDao{
 	public ImageSrc selectImageSrcById(long id) {
 		// TODO select query (image src)
 		
-		ImageSrc imgSrc = (ImageSrc) sqlSession.selectOne("selectImageSrcbyId", id);	
+		ImageSrc imgSrc = (ImageSrc) sqlSession.selectOne("selectImageSrcById", id);	
 		return imgSrc;
 	}
 	
