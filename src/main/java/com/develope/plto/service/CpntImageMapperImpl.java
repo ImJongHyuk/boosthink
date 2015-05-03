@@ -29,7 +29,6 @@ public class CpntImageMapperImpl implements CpntImageMapper {
 			ImageSrc tImgSrc = imageSrcDaoImpl.selectImageSrcById(logicCpnts.get(i).getImgSRC());
 			Map<LogicCpnt, ImageSrc> tMap = new HashMap<>();
 			tMap.put(tLogic, tImgSrc);
-			System.out.println("what: "+tMap.get(tLogic).getFD_IMAGE_SRC());
 			list.add(tMap);
 		}
 		return list;
@@ -45,8 +44,6 @@ public class CpntImageMapperImpl implements CpntImageMapper {
 			ImageSrc tImgSrc = imageSrcDaoImpl.selectImageSrcById(layoutCpnts.get(i).getImgSRC());
 			Map<LayoutCpnt, ImageSrc> tMap = new HashMap<>();
 			tMap.put(tLayout, tImgSrc);
-			System.out.println("id: "+layoutCpnts.get(i).getImgSRC());
-			System.out.println("what: "+tMap.get(tLayout).getFD_IMAGE_SRC());
 			list.add(tMap);
 		}
 		return list;
