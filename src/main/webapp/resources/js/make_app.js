@@ -95,14 +95,9 @@ function load_make_app_state(change_app_state){
 			url: "get_dynamic_all_layout_cpnt.ajax",
 			type: "GET",
 			success: function(json){
-				console.log(JSON.stringify(json));
-				console.log(json);
-				console.log(json[0]);
-				console.log(json[1]);
-				console.log(json[0].id);
-				console.log(json[1].id);
 				for(var i=0; i<json.length;i++){
-					$("#make_app_right_list").append("<article id = '"+json[i].id+"'style='position: relative; width: 100%; text-align:center'>"+json[i].id);
+					$("#make_app_right_list").append("<article id = '"+json[i].layoutCpnt.id+"'style='position: relative; width: 100%; text-align:center'>" +
+							"<img src='http://plto.ipdisk.co.kr/publist/HDD1/beeild"+json[i].imageSrc.fd_IMAGE_SRC+"'></article>");
 				}
 			},
 			error: function(err){
@@ -117,7 +112,8 @@ function load_make_app_state(change_app_state){
 			type: "GET",
 			success: function(json){
 				for(var i=0; i<json.length;i++){
-					$("#make_app_right_list").append("<article id = '"+json[i].id+"'style='position: relative; width: 100%; text-align:center'>"+json[i].id);
+					$("#make_app_right_list").append("<article id = '"+json[i].logicCpnt.id+"'style='position: relative; width: 100%; text-align:center'>" +
+							"<img src='http://plto.ipdisk.co.kr/publist/HDD1/beeild"+json[i].imageSrc.fd_IMAGE_SRC+"'></article>");
 				}
 			},
 			error: function(err){
@@ -132,7 +128,7 @@ function load_make_app_state(change_app_state){
 			type: "GET",
 			success: function(json){
 				for(var i=0; i<json.length;i++){
-					$("#make_app_right_list").append("<article id = '"+json[i].id+"'style='position: relative; width: 100%; text-align:center'>"+json[i].id);
+					$("#make_app_right_list").append("<article id = '"+json[i].id+"'style='position: relative; width: 100%; text-align:center'>"+json[i].id+"</article>");
 				}
 			},
 			error: function(err){
