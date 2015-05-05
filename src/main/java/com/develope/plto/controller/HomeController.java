@@ -34,7 +34,7 @@ public class HomeController extends HttpServlet {
 
 	// 서버를 시작하자마자 appthread를 관리하는 쓰레드를 작동시킴
 	// 추후 init 메소드로 변경할 부분임
-	private LifeCycleThread lct = new LifeCycleThread();
+	private LifeCycleThread lifeCycleThread = new LifeCycleThread();
 
 	@Autowired
 	private MemberDaoImpl memberDaoImpl;
@@ -331,7 +331,7 @@ public class HomeController extends HttpServlet {
 		System.out.println("게시글 아이디: "+board_id);
 
 
-		String script = appServiceImpl.executeApp(board_id, lct, auth.getName());//앱 등록 서비스
+		String script = appServiceImpl.executeApp(board_id, lifeCycleThread, auth.getName());//앱 등록 서비스
 
 		model.addAttribute("layout_data", script);
 
@@ -365,16 +365,15 @@ public class HomeController extends HttpServlet {
 
 	//이벤트 처리(버튼 클릭 등의 이벤트)
 	@RequestMapping(value = "/exercise", method = RequestMethod.POST)
-	public @ResponseBody String exe_plang(@RequestParam(value="thread_id")String thread_id, @RequestParam(value="layout_id")String layout_id, @RequestParam(value="event_id")String event_id, @RequestParam(value="start_value")String start_value , HttpSession session)
+	public @ResponseBody String exe_plang(
+			@RequestParam(value="thread_id")String thread_id, 
+			@RequestParam(value="layout_id")String layout_id, 
+			@RequestParam(value="event_id")String event_id, 
+			@RequestParam(value="start_value")String start_value, 
+			HttpSession session)
 	{
-		//		System.out.print(lct.getThmapKeySet());
-		//		System.out.print("입력해보아");
-		//		Scanner sc = new Scanner(System.in);
-		//		long input = sc.nextLong();
-		//		AppThread at= lct.getThmap(input);
-
 		//쓰레드 아이디를 레이아웃에서 가져와서 실행
-		AppThread at= lct.getThmap(Long.parseLong(thread_id));
+		AppThread at= lifeCycleThread.getThmap(Long.parseLong(thread_id));
 
 		//플랭 아이디를 레이아웃 아이디와 이벤트 아이디를 이용하여 가져옴
 		String plang_id = scriptMapperDaoImpl.selectPlangId(Long.parseLong(layout_id), event_id);
@@ -386,10 +385,13 @@ public class HomeController extends HttpServlet {
 		return start_value;
 	}
 
+	
 	@RequestMapping(value = "/checkToScript.ajax", method = RequestMethod.POST)
-	public @ResponseBody String checkToScript(@RequestParam(value="thread_id")long thread_id, HttpSession session)
+	public @ResponseBody String checkToScript(
+			@RequestParam(value="thread_id")long thread_id, 
+			HttpSession session)
 	{
-		AppThread at = lct.getThmap(thread_id);
+		AppThread at = lifeCycleThread.getThmap(thread_id);
 
 		JSONObject toScript = at.checkQueue(sessionDaoImpl.selectEmail(session.getId()));	
 		if(toScript == null)
@@ -405,8 +407,13 @@ public class HomeController extends HttpServlet {
 		return toScript.toJSONString();
 	}
 
+	
+	/*
+	 * old method: category 기반으로 cpnt호출
 	@RequestMapping(value = "/getLayoutComponentsByCategory.ajax", method = RequestMethod.POST)
-	public @ResponseBody String getLayoutComponentsByCategory(@RequestParam(value="category")long category, HttpSession session)
+	public @ResponseBody String getLayoutComponentsByCategory(
+			@RequestParam(value="category")long category, 
+			HttpSession session)
 	{
 		List<LayoutCpnt> list = layoutCpntDaoImpl.selectLayoutCpnt(category);
 
@@ -426,10 +433,10 @@ public class HomeController extends HttpServlet {
 		return obj.toJSONString();
 	}
 
-	
-	
 	@RequestMapping(value = "/getLogicComponentsByCategory.ajax", method = RequestMethod.POST)
-	public @ResponseBody String getLogicComponentsByCategory(@RequestParam(value="category")long category, HttpSession session)
+	public @ResponseBody String getLogicComponentsByCategory(
+			@RequestParam(value="category")long category, 
+			HttpSession session)
 	{
 		List<LogicCpnt> list = logicCpntDaoImpl.selectLogicCpnt(category);
 
@@ -458,4 +465,5 @@ public class HomeController extends HttpServlet {
 		else
 			return "redirect:/main";
 	}
+	*/
 }

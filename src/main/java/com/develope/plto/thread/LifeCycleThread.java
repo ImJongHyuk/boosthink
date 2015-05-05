@@ -44,7 +44,7 @@ public class LifeCycleThread extends Thread{
 			}
 
 			
-			//10초간 대기
+			//10초간 대기, (=10초 마다 죽일지 여부를 판단)
 			try {
 				Thread.sleep(10000);
 			} catch (InterruptedException e) {
