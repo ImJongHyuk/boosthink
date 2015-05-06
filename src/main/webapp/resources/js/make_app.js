@@ -28,22 +28,25 @@ $(document).on("click", ".make_app_right_button", function(e){
 
 //Give draggable function to each layout_component
 //원본 유지하고 싶으면 "helper: clone," 추가
-$(function(){
-	$(".layout_comp").draggable({
+function set_draggable_attr(class_name){
+	$("."+class_name).draggable({
 		stack: ".ui-dragging",
 		containment: 'body',
 		start: function(ev, ui){
+			show_comp_coord($(this));
 		},
 		drag: function(ev, ui){
+			move_comp_coord($(this));
 		},
 		stop: function(ev,ui){
+			hide_comp_coord($(this));
 		}
-	});
-});
+	});	
+}
 
 //Give droppable function to body
 $(function(){
-	$("body").droppable({
+	$("#make_app_main").droppable({
 		accept: ".layout_comp",
 		drop: function (event, ui) {
 
@@ -81,7 +84,7 @@ function load_make_app_state(change_app_state){
 			type: "GET",
 			success: function(json){
 				for(var i=0; i<json.length;i++){
-					$("#make_app_right_list").append("<article id = '"+json[i].email+"'style='position: relative; width: 100%; text-align:center'>"+json[i].email);
+					$("#make_app_right_list").append("<article id = '"+json[i].email+"'style='position: relative; width: 100%; text-align:center;'>"+json[i].email);
 				}
 			},
 			error: function(err){
@@ -96,9 +99,10 @@ function load_make_app_state(change_app_state){
 			type: "GET",
 			success: function(json){
 				for(var i=0; i<json.length;i++){
-					$("#make_app_right_list").append("<article id = '"+json[i].layoutCpnt.id+"'style='position: relative; width: 100%; text-align:center'>" +
+					$("#make_app_right_list").append("<article id = '"+json[i].layoutCpnt.id+"' class='layout_comp' style='position: relative; width: 100%; text-align:center;'>" +
 							"<img src='http://plto.ipdisk.co.kr/publist/HDD1/beeild"+json[i].imageSrc.fd_IMAGE_SRC+"'></article>");
 				}
+				set_draggable_attr("layout_comp");
 			},
 			error: function(err){
 				alert("BUTTON2_ERROR?");
@@ -112,7 +116,7 @@ function load_make_app_state(change_app_state){
 			type: "GET",
 			success: function(json){
 				for(var i=0; i<json.length;i++){
-					$("#make_app_right_list").append("<article id = '"+json[i].logicCpnt.id+"'style='position: relative; width: 100%; text-align:center'>" +
+					$("#make_app_right_list").append("<article id = '"+json[i].logicCpnt.id+"'style='position: relative; width: 100%; text-align:center;'>" +
 							"<img src='http://plto.ipdisk.co.kr/publist/HDD1/beeild"+json[i].imageSrc.fd_IMAGE_SRC+"'></article>");
 				}
 			},
@@ -128,7 +132,7 @@ function load_make_app_state(change_app_state){
 			type: "GET",
 			success: function(json){
 				for(var i=0; i<json.length;i++){
-					$("#make_app_right_list").append("<article id = '"+json[i].id+"'style='position: relative; width: 100%; text-align:center'>"+json[i].id+"</article>");
+					$("#make_app_right_list").append("<article id = '"+json[i].id+"'style='position: relative; width: 100%; text-align:center;'>"+json[i].id+"</article>");
 				}
 			},
 			error: function(err){
@@ -140,7 +144,25 @@ function load_make_app_state(change_app_state){
 	make_app_state = change_app_state;
 }
 
+/* 컴포넌트 이동시작시 좌표 표시 draggable.start */
+function show_comp_coord(comp){
+	$("body").append("<article id='comp_coord' style='position: absolute; width: 5%; background-color: skyblue;'></article>");
+	$("#comp_coord").css("top", comp.offset().top-comp.height());
+	$("#comp_coord").css("left", comp.offset().left);
+	$("#comp_coord").append(comp.offset().top.toFixed(2) + "<br>" + comp.offset().left.toFixed(2));
+}
 
+/* 컴포넌트 이동 중 좌표 표시 draggable.drag */
+function move_comp_coord(comp){
+	$("#comp_coord").html(comp.offset().top.toFixed(2) + "<br>" + comp.offset().left.toFixed(2));
+	$("#comp_coord").css("top",comp.offset().top-comp.height());
+	$("#comp_coord").css("left",comp.offset().left);
+}
+
+/* 컴포넌트 이동시 좌표 표시창 제거 draggable.stop */
+function hide_comp_coord(comp){
+	$("#comp_coord").remove();
+}
 
 
 
