@@ -60,7 +60,9 @@
 			<article class="ch-info"></article>
 		</article>
 		<article class="ch-item ch-img" style="top: 40%; left: 26%;">
-			<article class="ch-info"></article>
+			<article class="ch-info">
+				<!-- <h3>Add<br> widget</h3> -->
+			</article>
 		</article>
 	</article>
 
