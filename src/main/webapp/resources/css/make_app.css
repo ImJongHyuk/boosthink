@@ -298,13 +298,17 @@ footer {
 }
 
 #search input[type="text"] {
-    background: url(http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/search-white.png) no-repeat 10px 6px #fcfcfc;
+    background: url(http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/search-white.png) no-repeat 2% 60% #fcfcfc;
+    background-size: 6%;
     border: 1px solid #d1d1d1;
-    font: bold 0.8rem Arial,Helvetica,Sans-serif;
+    /*font: bold 0.8rem Arial,Helvetica,Sans-serif;*/
+    /*font-weight: bold;
+    font-family: Arial,Helvetica,Sans-serif;
+    font-size: 0.7rem;*/
+    padding-top: 1.5%;
     color: #bebebe;
     width: 100%;
-    height: 100%;
-    padding: 3% 5% 2% 10%;
+    /*padding: 2% 5% 2% 10%;*/
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;

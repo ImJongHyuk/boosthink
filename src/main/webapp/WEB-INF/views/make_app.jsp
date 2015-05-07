@@ -74,8 +74,8 @@
 
 	<!-- 화면 오른쪽 -->
 	<article class="make_app_right" id="make_app_right_searchbar">
-		<form method="get" action="/search" id="search" style="width: 100%; height: 100%; margin-top: -0.7%;">
-			<input name="q" type="text" size="40" placeholder="Search..." style="width: 100%; height: line-height; padding-left: 10%;" />
+		<form method="get" action="/search" id="search" style="width: 100%; height: 100%; font-size: 70%;">
+			<input name="q" type="text" size="40" placeholder="Search..." style="width: 100%; height: 100%; padding-left: 10%; position: relative; top: 0%" />
 		</form>
 	</article>
 	<article class="make_app_right" id="make_app_right_button">
