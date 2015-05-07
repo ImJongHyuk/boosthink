@@ -107,21 +107,6 @@ function onDroppable(){
 	$('#logicLeft').droppable({
 		accept: '.logicComp, .compGroup',
 		drop: function (ev, ui) {
-			
-			var thisComp = $(ui.draggable);		//지금 잡고있는 놈
-			if($(ui.draggable).attr('id').search('group') != -1)
-			{
-				//alert("이건 바뀐 코드야");
-				//var id = thisComp.attr('id');
-				//id = id.substr(5,1);
-				//alert($("[groupCnt="+id+"]").length);
-				//group0 -> comp -> eq(0) - i
-				//for(var i=0;i<$("[groupCnt="+id+"]").length; i++)
-				//{
-//					alert($('#'+thisComp.attr('id')+'>.logicComp').eq(i).attr('id'));
-				//}
-				return;
-			}
 			var thisComp = $(ui.draggable);
 			if(retComp != undefined)
 				mergeChk = chkDropException(retComp, thisComp);
