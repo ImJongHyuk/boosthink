@@ -138,6 +138,7 @@ function load_make_app_state(change_app_state){
 	}
 	/* Layout Component List */
 	else if(button_id == "make_app_right_button_2"){
+		
 		$.ajax({
 			url: "get_dynamic_all_layout_cpnt.ajax",
 			contentType: "application/json; charset=utf-8",
@@ -153,6 +154,8 @@ function load_make_app_state(change_app_state){
 				set_droppable_attr("layout_comp");
 			},
 			error: function(err){
+				System.out.println("DSDSFASDF");
+				System.out.println(json);
 				alert("BUTTON2_ERROR?");
 			}
 		});		
