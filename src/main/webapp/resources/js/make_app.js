@@ -170,8 +170,9 @@ function load_make_app_state(change_app_state){
 							"<img src='http://plto.ipdisk.co.kr/publist/HDD1/beeild"+json[i].imageSrc.fd_IMAGE_SRC+"'></article>");
 				}
 			},
-			error: function(err){
+			error: function(request, status, err){
 				alert("BUTTON3_ERROR?");
+				alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+err);
 			}
 		});		
 	}
