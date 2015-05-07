@@ -119,7 +119,9 @@ footer {
 .ch-info {
 	height: 100%;
 	width: 100%;
-	background: rgba(171,202,234,0.7);
+	/*background-color: rgba(171,202,234,0.7);*/
+	background: rgba(171,202,234,0.7) url("http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/add_widget.png") no-repeat center center;
+	background-size: 100% 100%;
 	opacity: 0;
 	
 	-webkit-transition: all 0.4s ease-in-out;
@@ -240,25 +242,33 @@ footer {
 
 #make_app_right_button_1 {
 	left: 0%;
-	background-color: #fee8cf;
+	/* background-color: #fee8cf; */
+	background: url("http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/people_button.png") no-repeat;
+	background-size: 100% 100%;
 }
 
 #make_app_right_button_2 {
 	left: 25%;
-	background-color: #ffdeda;
+	/* background-color: #ffdeda; */
 	border-left: 0px;
+	background: url("http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/layout_button.png") no-repeat;
+	background-size: 100% 100%;
 }
 
 #make_app_right_button_3 {
 	left: 50%;
-	background-color: #ffffd1;
+	/* background-color: #ffffd1; */
 	border-left: 0px;
+	background: url("http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/logic_button.png") no-repeat;
+	background-size: 100% 100%;
 }
 
 #make_app_right_button_4 {
 	left: 75%;
-	background-color: #cfd0ff;
+	/* background-color: #cfd0ff; */
 	border-left: 0px;
+	background: url("http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/service_button.png") no-repeat;
+	background-size: 100% 100%;
 }
 
 /* bottom */

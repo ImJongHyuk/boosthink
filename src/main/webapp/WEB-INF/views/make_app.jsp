@@ -30,7 +30,7 @@
 <body>
 	<!-- 화면 맨 위 -->
 	<header id="make_app_header">
-		<p align="left" style="float: left; width: 15%; height: 100%; margin: 10px 0px 0px 20px; vertical-align: middle;">
+		<p align="left" style="float: left; width: 15%; height: 100%; margin: 0.7% 0px 0px 1.5%;">
 			<img height="70%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/play_together.png" id=""/>
 		</p>
 		<p align="right" style="float: right; width: 40%; height: 100%; margin: 0.5% 8% 0px 0px;">
@@ -47,28 +47,20 @@
 	
 	<article id="make_app_main">
 		<article class="ch-item ch-img" style="top: 10%; left: 10%;">
-			<article class="ch-info">
-				<h3>Add<br> widget</h3>
-			</article>
+			<article class="ch-info"></article>
 		</article>
 		<article class="ch-item ch-img" style="top: 10%; left: 26%;">
-			<article class="ch-info">
-				<h3>Add<br> widget</h3>
-			</article>
+			<article class="ch-info"></article>
 		</article>
 		<article class="make_app_main_widget" id="make_app_main_widget_1">widget
 			3(작업목록)</article>
 		<article class="make_app_main_widget" id="make_app_main_widget_2">widget
 			4(최근활동)</article>
 		<article class="ch-item ch-img" style="top: 40%; left: 10%;">
-			<article class="ch-info">
-				<h3>Add<br> widget</h3>
-			</article>
+			<article class="ch-info"></article>
 		</article>
 		<article class="ch-item ch-img" style="top: 40%; left: 26%;">
-			<article class="ch-info">
-				<h3>Add<br> widget</h3>
-			</article>
+			<article class="ch-info"></article>
 		</article>
 	</article>
 
@@ -79,18 +71,10 @@
 		</form>
 	</article>
 	<article class="make_app_right" id="make_app_right_button">
-		<article class="make_app_right_button" id="make_app_right_button_1">
-			<img style="width: 100%; height: 100%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/people_button.png" id=""/>
-		</article>
-		<article class="make_app_right_button" id="make_app_right_button_2">
-			<img style="width: 100%; height: 100%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/layout_button.png" id=""/>
-		</article>
-		<article class="make_app_right_button" id="make_app_right_button_3">
-			<img style="width: 100%; height: 100%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/logic_button.png" id=""/>
-		</article>
-		<article class="make_app_right_button" id="make_app_right_button_4">
-			<img style="width: 100%; height: 100%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/service_button.png" id=""/>
-		</article>
+		<article class="make_app_right_button" id="make_app_right_button_1"></article>
+		<article class="make_app_right_button" id="make_app_right_button_2"></article>
+		<article class="make_app_right_button" id="make_app_right_button_3"></article>
+		<article class="make_app_right_button" id="make_app_right_button_4"></article>
 	</article>
 	<article class="make_app_right" id="make_app_right_list">
 		<article class="right_comp">
