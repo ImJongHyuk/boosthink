@@ -67,14 +67,16 @@ function set_resizable_attr(class_name){
 }
 
 //Give droppable function to body
-$(function(){
+function set_droppable_attr(class_name){
+	$(".ui-droppable").droppable("destroy");
+	
 	$("#make_app_main").droppable({
-		accept: ".layout_comp",
+		accept: "." + class_name,
 		drop: function (event, ui) {
 
 		}
 	});
-});
+}
 
 /* 첫 로드 시 유저화면으로 초기화 */
 function make_app_initialize(){
@@ -126,6 +128,7 @@ function load_make_app_state(change_app_state){
 				}
 				set_draggable_attr("layout_comp");
 				set_resizable_attr("layout_comp");
+				set_droppable_attr("layout_comp");
 			},
 			error: function(err){
 				alert("BUTTON2_ERROR?");
