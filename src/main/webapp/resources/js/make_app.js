@@ -39,9 +39,31 @@ function set_draggable_attr(class_name){
 			move_comp_coord($(this));
 		},
 		stop: function(ev,ui){
-			hide_comp_coord($(this));
+			remove_comp_coord($(this));
 		}
 	});	
+}
+
+/* Give resizable function to each layout_component */
+function set_resizable_attr(class_name){
+	$("."+class_name).each(function(){
+		$(this).resizable({
+			alsoResize: '#'+$(this).attr('id')+' > img',
+			minHeight: $(this).height(),
+			minWidth: $(this).width(),
+			maxHeight: $("#make_app_main").height(),
+			maxWidth: $("#make_app_main").width(),
+			start: function(event, ui){
+				show_comp_size($(this));
+			},
+			resize: function(event, ui){
+				resize_comp_size($(this));
+			},
+			stop: function(event, ui){
+				remove_comp_size($(this));
+			}
+		});
+	});
 }
 
 //Give droppable function to body
@@ -99,10 +121,11 @@ function load_make_app_state(change_app_state){
 			type: "GET",
 			success: function(json){
 				for(var i=0; i<json.length;i++){
-					$("#make_app_right_list").append("<article id = '"+json[i].layoutCpnt.id+"' class='layout_comp' style='position: relative; width: 100%; text-align:center;'>" +
+					$("#make_app_right_list").append("<article id = '"+json[i].layoutCpnt.id+"' class='layout_comp' style='position: relative; width: 25%; text-align:center;'>" +
 							"<img src='http://plto.ipdisk.co.kr/publist/HDD1/beeild"+json[i].imageSrc.fd_IMAGE_SRC+"'></article>");
 				}
 				set_draggable_attr("layout_comp");
+				set_resizable_attr("layout_comp");
 			},
 			error: function(err){
 				alert("BUTTON2_ERROR?");
@@ -144,27 +167,52 @@ function load_make_app_state(change_app_state){
 	make_app_state = change_app_state;
 }
 
-/* 컴포넌트 이동시작시 좌표 표시 draggable.start */
+/* 컴포넌트 이동시작시 좌표 표시 draggable.start
+ * 사용 : set_draggable_attr */
 function show_comp_coord(comp){
-	$("body").append("<article id='comp_coord' style='position: absolute; width: 5%; background-color: skyblue;'></article>");
-	$("#comp_coord").css("top", comp.offset().top-comp.height());
-	$("#comp_coord").css("left", comp.offset().left);
-	$("#comp_coord").append(comp.offset().top.toFixed(2) + "<br>" + comp.offset().left.toFixed(2));
+	$("body").append("<article id='comp_coord_box' style='position: absolute; width: 5%; background-color: skyblue;'></article>");
+	$("#comp_coord_box").append(comp.offset().top.toFixed(2) + "<br>" + comp.offset().left.toFixed(2));
+	$("#comp_coord_box").css("top", comp.offset().top - $("#comp_coord_box").height());
+	$("#comp_coord_box").css("left", comp.offset().left);
 }
 
-/* 컴포넌트 이동 중 좌표 표시 draggable.drag */
+/* 컴포넌트 이동 중 좌표 표시 draggable.drag
+ * 사용 : set_draggable_attr */
 function move_comp_coord(comp){
-	$("#comp_coord").html(comp.offset().top.toFixed(2) + "<br>" + comp.offset().left.toFixed(2));
-	$("#comp_coord").css("top",comp.offset().top-comp.height());
-	$("#comp_coord").css("left",comp.offset().left);
+	$("#comp_coord_box").html(comp.offset().top.toFixed(2) + "<br>" + comp.offset().left.toFixed(2));
+	$("#comp_coord_box").css("top",comp.offset().top - $("#comp_coord_box").height());
+	$("#comp_coord_box").css("left",comp.offset().left);
 }
 
-/* 컴포넌트 이동시 좌표 표시창 제거 draggable.stop */
-function hide_comp_coord(comp){
-	$("#comp_coord").remove();
+/* 컴포넌트 이동시 좌표 표시창 제거 draggable.stop
+ * 사용 : set_draggable_attr */
+function remove_comp_coord(comp){
+	$("#comp_coord_box").remove();
 }
 
+/* 컴포넌트의 크기 출력, 시작시 현재 크기 resizable.start
+ * 사용 : set_resizable_attr */
+function show_comp_size(comp){
+	$("body").append("<article id='comp_size_box' style='position: absolute; width: 5%; background-color: skyblue;'></article>");
+	$("#comp_size_box").append(comp.width().toFixed(2) + "<br>" + comp.height().toFixed(2));
+	$("#comp_size_box").css("top", comp.offset().top - $("#comp_size_box").height());
+	$("#comp_size_box").css("left", comp.offset().left);	
+}
 
+/* 컴포넌트의 크기 출력, 크기 조절시 조절 중인 크기 resizable.resize
+ * 사용 : set_resizable_attr */
+function resize_comp_size(comp){
+	$("#comp_size_box").html(comp.width().toFixed(2) + "<br>" + comp.height().toFixed(2));
+	$("#comp_size_box").css("top",comp.offset().top - $("#comp_size_box").height());
+	$("#comp_size_box").css("left",comp.offset().left);	
+}
+
+/* 컴포넌트의 크기 출력, 종료시 출력창 제거 resizable.stop
+ * 사용 : set_resizable_attr
+ */
+function remove_comp_size(comp){
+	$("#comp_size_box").remove();
+} 
 
 
 
