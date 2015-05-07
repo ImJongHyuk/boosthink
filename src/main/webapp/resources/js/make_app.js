@@ -154,9 +154,6 @@ function load_make_app_state(change_app_state){
 				set_droppable_attr("layout_comp");
 			},
 			error: function(err){
-				System.out.println("DSDSFASDF");
-				System.out.println(json);
-				console.log("DSDASD");
 				console.log(json);
 				alert("BUTTON2_ERROR?");
 			}
