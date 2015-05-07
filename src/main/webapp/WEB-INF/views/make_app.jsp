@@ -13,12 +13,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 <!-- Style Sheet -->
-<link type="text/css" rel="stylesheet"
-	href="<c:url value='/resources/css/base.css'/>" />
-<link type="text/css" rel="stylesheet"
-	href="<c:url value='/resources/css/debug.css'/>" />
-<link type="text/css" rel="stylesheet"
-	href="<c:url value='/resources/css/make_app.css'/>" />
+<link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/base.css'/>" />
+<link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/debug.css'/>" />
+<link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/make_app.css'/>" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
 <!-- JavaScript -->
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -75,12 +73,24 @@
 	</article>
 
 	<!-- 화면 오른쪽 -->
-	<article class="make_app_right" id="make_app_right_searchbar"></article>
+	<article class="make_app_right" id="make_app_right_searchbar">
+		<form method="get" action="/search" id="search" style="width: 100%; height: 100%; font-size: 70%;">
+			<input name="q" type="text" size="40" placeholder="Search..." style="width: 100%; height: 100%; padding-left: 10%; position: relative; top: 0%" />
+		</form>
+	</article>
 	<article class="make_app_right" id="make_app_right_button">
-		<article class="make_app_right_button" id="make_app_right_button_1">사람</article>
-		<article class="make_app_right_button" id="make_app_right_button_2">레이</article>
-		<article class="make_app_right_button" id="make_app_right_button_3">로직</article>
-		<article class="make_app_right_button" id="make_app_right_button_4">섭스</article>
+		<article class="make_app_right_button" id="make_app_right_button_1">
+			<img style="width: 100%; height: 100%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/people_button.png" id=""/>
+		</article>
+		<article class="make_app_right_button" id="make_app_right_button_2">
+			<img style="width: 100%; height: 100%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/layout_button.png" id=""/>
+		</article>
+		<article class="make_app_right_button" id="make_app_right_button_3">
+			<img style="width: 100%; height: 100%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/logic_button.png" id=""/>
+		</article>
+		<article class="make_app_right_button" id="make_app_right_button_4">
+			<img style="width: 100%; height: 100%;" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/service_button.png" id=""/>
+		</article>
 	</article>
 	<article class="make_app_right" id="make_app_right_list">
 		<article class="right_comp">

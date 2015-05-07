@@ -20,7 +20,7 @@
 </head>
 <!-- 로드시 Fade in -->
 <body onload="fIn()">
-	<img src="http://i.imgur.com/T2qCras.png" id="login_plto_logo"/>
+	<img src="//i.imgur.com/T2qCras.png" id="login_plto_logo"/>
 	<article id="layer_middle_left">&lt;</article>
 
 	<!-- 
@@ -39,12 +39,12 @@
 			</form>
 			 -->
 
+S
 
-
-		<img src="http://i.imgur.com/hVITmbR.png" id="label_id" />
+		<img src="//i.imgur.com/hVITmbR.png" id="label_id" />
 		<input id="input_id" type="text">
 		
-		<img src="http://i.imgur.com/hDRavWc.png" id="label_pw"/>
+		<img src="//i.imgur.com/hDRavWc.png" id="label_pw"/>
 		<input id="input_pw" type="text">
 		
 		<input type="button" value="login" id="login_button">
