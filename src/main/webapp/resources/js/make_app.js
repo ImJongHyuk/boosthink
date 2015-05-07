@@ -156,6 +156,8 @@ function load_make_app_state(change_app_state){
 			error: function(err){
 				System.out.println("DSDSFASDF");
 				System.out.println(json);
+				console.log("DSDASD");
+				console.log(json);
 				alert("BUTTON2_ERROR?");
 			}
 		});		
