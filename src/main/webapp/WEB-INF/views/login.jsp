@@ -4,6 +4,17 @@
 <html>
 <head>
 <title>PLTO에 오신 것을 환영합니다.</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- bootstrap CDN -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 <link type="text/css" rel="stylesheet"
 	href="<c:url value='/resources/css/base.css'/>" />
 <link type="text/css" rel="stylesheet"
@@ -20,28 +31,93 @@
 </head>
 <!-- 로드시 Fade in -->
 <body onload="fIn()">
-	<img src="//i.imgur.com/T2qCras.png" id="login_plto_logo"/>
-	<article id="layer_middle_left">&lt;</article>
+	<!-- <img src="//i.imgur.com/T2qCras.png" id="login_plto_logo" /> -->
+	<!-- <article id="layer_middle_left">&lt;</article> -->
 
-	<!-- 
-			<form id="login_form"
-				action="<c:url value="j_spring_security_check" />" method="post">
-				<table id="login_table">
-					<tr>
-						<th><label for="j_username">ID</label></th>
-						<td><input id="j_username" name="j_username" type="text"></td>
-					</tr>
-					<tr>
-						<th><label for="j_password">Password</label></th>
-						<td><input id="j_password" name="j_password" type="password"></td>
-					</tr>
-				</table>
-			</form>
-			 -->
+	<div class="container" style="position: absolute; top: 30%; left: 10%;">
+		<!-- <h2 style="text-align: left;"><img src="//i.imgur.com/T2qCras.png" id="" style="width: 150px; margin-left: 8%;"/></h2> -->
+		<form class="form-horizontal" role="form">
+		<div class="row">
+		<div class="col-sm-6" style="border-right: 5px; height: 100%; border-color: #707070; border-style: solid; padding-right: 50px;">
+			<div class="form-group">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-8" style="text-align: left;"><img src="//i.imgur.com/T2qCras.png" id="" style="width: 150px;"/></div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-4" for="email">Email:</label>
+				<div class="col-sm-8" style="text-align: left;">
+					<!-- <p class="form-control-static">someone@example.com</p> -->
+					<input type="text" class="form-control" id="usr" placeholder="Email Address" style="background-color: #d1e0ff;">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-4" for="pwd">Password:</label>
+				<div class="col-sm-8">
+					<input type="password" class="form-control" id="pwd" placeholder="Password" style="background-color: #ffdeda;">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-8" style="text-align: left;">
+					<button type="submit" class="btn btn-default" style="width: 90%; background-color: #ededed;">Login</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="col-sm-2" style="padding: 15% 0% 15% 0%; font-size: 18px;">Login with</div>
+			<div class="col-sm-4" style="text-align: left;">
+			<a href="" onfocus="this.blur()">
+				<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/facebook.png" style="width: 70px; height: auto; margin-top: 10px;">
+			</a><br>
+			<a href="" onfocus="this.blur()">
+				<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/google.png" style="width: 70px; height: auto; margin-top: 30px;">
+			</a>
+			</div>
+		</div>
+		</div>
+			<!-- <div class="form-group">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-4" style="text-align: left;"><img src="//i.imgur.com/T2qCras.png" id="" style="width: 150px;"/></div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="email">Email:</label>
+				<div class="col-sm-4" style="text-align: left;">
+					<!-- <p class="form-control-static">someone@example.com</p>
+					<input type="text" class="form-control" id="usr" placeholder="Email Address" style="background-color: #d1e0ff;">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="pwd">Password:</label>
+				<div class="col-sm-4">
+					<input type="password" class="form-control" id="pwd" placeholder="Password" style="background-color: #ffdeda;">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-4" style="text-align: left;">
+					<button type="submit" class="btn btn-default" style="width: 90%; background-color: #ededed;">Login</button>
+				</div>
+			</div> -->
+		</form>
+	</div>
 
-S
 
-		<img src="//i.imgur.com/hVITmbR.png" id="label_id" />
+	<!-- <form id="login_form"
+		action="<c:url value="j_spring_security_check" />" method="post">
+		<table id="login_table" style="width: 100%;">
+			<tr style="width: 100%;">
+				<th style="width: 5%;"><label for="j_username" style="width: 100%;">ID</label></th>
+				<td style="width: 95%;"><input id="j_username" name="j_username" type="text" style="width: 11.5%;"></td>
+			</tr>
+			<tr>
+				<th><label for="j_password">Password</label></th>
+				<td><input id="j_password" name="j_password" type="password"></td>
+			</tr>
+		</table>
+	</form> -->
+
+
+
+
+	<!-- <img src="//i.imgur.com/hVITmbR.png" id="label_id" />
 		<input id="input_id" type="text">
 		
 		<img src="//i.imgur.com/hDRavWc.png" id="label_pw"/>
@@ -51,8 +127,8 @@ S
 		
 		<article id="sign_up"> sign up </article>
 		
-		<article id="login_with"> login_with </article>
-	
+		<article id="login_with"> login_with </article> -->
+
 
 
 
@@ -67,6 +143,6 @@ S
 	<a id="GoTest">Soek's test</a>
 
 
-	<article id="layer_middle_right">&gt;</article>
+	<!-- <article id="layer_middle_right">&gt;</article> -->
 </body>
 </html>
