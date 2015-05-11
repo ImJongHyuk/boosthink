@@ -80,9 +80,20 @@ function set_droppable_attr(class_name){
 			var original_comp = $(ui.draggable);
 			/* 현재 이동 중인 컴포넌트(clone) 헬퍼 */
 			var helper = $(ui.helper);
-			/* 복사된 컴포넌트 */
-			var copy_comp = $(ui.draggable).clone().attr('original',0).attr('id',$("[id^='"+original_comp.attr("id")+"']").length);
-			copy_comp.offset({top: helper.offset().top, left: helper.offset().left});
+			/* 이동 중인 컴포넌트가 복사본이 아닌 원본일 경우 */
+			if(original_comp.attr('original') == 1){
+				/* 복사된 컴포넌트 */
+				var copy_comp = $(ui.draggable).clone().attr('original',0).attr('id',$("[id^='"+original_comp.attr("id")+"']").length);
+				alert(helper.offset().top);
+				copy_comp.css("position","absolute").offset({top: (helper.offset().top-$("#make_app_main").offset().top), left: (helper.offset().left-$("#make_app_main").offset().left)});
+				/* Convert percent to pixel */
+				copy_comp.css('width',original_comp.width()).css('height',original_comp.height());
+				/* make_app_main에 붙임 */
+				$("#make_app_main").append(copy_comp);
+				
+				/* 이제 새로 복사된 copy_comp 에 draggable, resizable 기능 부여 */
+				////////////////////////////////////////////////
+			}
 		}
 	});
 }
