@@ -34,7 +34,7 @@
 	<!-- <img src="//i.imgur.com/T2qCras.png" id="login_plto_logo" /> -->
 	<!-- <article id="layer_middle_left">&lt;</article> -->
 
-	<div class="container" style="position: absolute; top: 30%; left: 10%;">
+	<div class="container" style="position: absolute; top: 30%; left: 20%;">
 		<!-- <h2 style="text-align: left;"><img src="//i.imgur.com/T2qCras.png" id="" style="width: 150px; margin-left: 8%;"/></h2> -->
 		<form class="form-horizontal" role="form">
 		<div class="row">
@@ -62,14 +62,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-6">
-			<div class="col-sm-2" style="padding: 15% 0% 15% 0%; font-size: 18px;">Login with</div>
+		<div class="col-sm-6" style="padding-top: 4%;">
+			<div class="col-sm-2" style="padding: 9% 0% 9% 0%; font-size: 18px; text-align: left;">Login with</div>
 			<div class="col-sm-4" style="text-align: left;">
 			<a href="" onfocus="this.blur()">
-				<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/facebook.png" style="width: 70px; height: auto; margin-top: 10px;">
+				<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/facebook.png" style="width: 50px; height: auto;">
 			</a><br>
 			<a href="" onfocus="this.blur()">
-				<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/google.png" style="width: 70px; height: auto; margin-top: 30px;">
+				<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/google.png" style="width: 50px; height: auto; margin-top: 20px;">
 			</a>
 			</div>
 		</div>
