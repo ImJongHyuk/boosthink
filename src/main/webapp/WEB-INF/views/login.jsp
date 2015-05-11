@@ -34,7 +34,7 @@
 	<!-- <img src="//i.imgur.com/T2qCras.png" id="login_plto_logo" /> -->
 	<!-- <article id="layer_middle_left">&lt;</article> -->
 
-	<div class="container" style="position: absolute; top: 30%; left: 20%;">
+	<div class="container" style="position: absolute; top: 30%; left: 15%; right: 15%; width: 70%;">
 		<!-- <h2 style="text-align: left;"><img src="//i.imgur.com/T2qCras.png" id="" style="width: 150px; margin-left: 8%;"/></h2> -->
 		<form class="form-horizontal" role="form">
 		<div class="row">
