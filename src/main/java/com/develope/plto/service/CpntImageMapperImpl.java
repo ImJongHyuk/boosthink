@@ -33,6 +33,7 @@ public class CpntImageMapperImpl implements CpntImageMapper {
 			tList.setLogicCpnt(tLogic);
 			list.add(tList);
 		}
+		System.out.println(list);
 		return list;
 	}
 
@@ -42,6 +43,7 @@ public class CpntImageMapperImpl implements CpntImageMapper {
 		//List<Map<LayoutCpnt, ImageSrc>> list = new ArrayList<Map<LayoutCpnt, ImageSrc>>();
 		List<CpntWithImageSrc> list = new ArrayList<CpntWithImageSrc>();
 		
+		System.out.println("logicCpnts size: "+layoutCpnts.size());
 		for(int i=0,n=layoutCpnts.size();i<n;i++){
 			LayoutCpnt tLayout = layoutCpnts.get(i);
 			ImageSrc tImgSrc = imageSrcDaoImpl.selectImageSrcById(layoutCpnts.get(i).getImgSRC());
@@ -50,6 +52,7 @@ public class CpntImageMapperImpl implements CpntImageMapper {
 			tList.setLayoutCpnt(tLayout);
 			list.add(tList);
 		}
+		System.out.println(list);
 		return list;
 	}
 
