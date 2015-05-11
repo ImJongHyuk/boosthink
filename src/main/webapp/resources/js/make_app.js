@@ -49,29 +49,51 @@ function set_draggable_attr(comp){
 
 /* Give resizable function to each layout_component */
 function set_resizable_attr(comp){
-	comp.resizable({
-		alsoResize: '#'+comp.attr('id')+' > img',
-		minHeight: comp.height(),
-		minWidth: comp.width(),
-		maxHeight: $("#make_app_main").height(),
-		maxWidth: $("#make_app_main").width(),
-		start: function(event, ui){
-			show_comp_size(comp);
-		},
-		resize: function(event, ui){
-			resize_comp_size(comp);
-		},
-		stop: function(event, ui){
-			remove_comp_size(comp);
-		}
-	});
-
+	if(comp.hasClass("logic_comp")){
+		comp.resizable({
+			alsoResize: '#'+comp.attr('id')+' > img',
+			minHeight: comp.height(),
+			minWidth: comp.width(),
+			maxHeight: $("#make_app_main").height(),
+			maxWidth: $("#make_app_main").width(),
+			aspectRatio: true,
+			start: function(event, ui){
+				show_comp_size(comp);
+			},
+			resize: function(event, ui){
+				resize_comp_size(comp);
+			},
+			stop: function(event, ui){
+				remove_comp_size(comp);
+			}
+		});
+	}
+	else{
+		comp.resizable({
+			alsoResize: '#'+comp.attr('id')+' > img',
+			minHeight: comp.height(),
+			minWidth: comp.width(),
+			maxHeight: $("#make_app_main").height(),
+			maxWidth: $("#make_app_main").width(),
+			start: function(event, ui){
+				show_comp_size(comp);
+			},
+			resize: function(event, ui){
+				resize_comp_size(comp);
+			},
+			stop: function(event, ui){
+				remove_comp_size(comp);
+			}
+		});
+	}
 }
 
 /* Give droppable function to body */
 function set_droppable_attr(class_name){
+	/* 전체 droppable 제거 */
 	$(".ui-droppable").droppable("destroy");
 
+	/* 새로운 component list에 대한 droppable 부여 */
 	$("#make_app_main").droppable({
 		accept: "." + class_name,
 		drop: function (event, ui) {
@@ -156,7 +178,6 @@ function load_make_app_state(change_app_state){
 	}
 	/* Layout Component List */
 	else if(button_id == "make_app_right_button_2"){
-
 		$.ajax({
 			url: "get_dynamic_all_layout_cpnt.ajax",
 			contentType: "application/json; charset=utf-8",
@@ -184,9 +205,13 @@ function load_make_app_state(change_app_state){
 			type: "GET",
 			success: function(json){
 				for(var i=0; i<json.length;i++){
-					$("#make_app_right_list").append("<article id = '"+json[i].logicCpnt.id+"'style='position: relative; width: 100%; text-align:center;'>" +
-							"<img src='http://plto.ipdisk.co.kr/publist/HDD1/beeild"+json[i].imageSrc.fd_IMAGE_SRC+"'></article>");
+					$("#make_app_right_list").append("<article id = 'logic_comp_"+(i+1)+"' class='logic_comp' style='position: relative; width: 25%; text-align:center;' primarykey='"+ json[i].logicCpnt.id +"' original='1'>" +
+							"<img src='http://plto.ipdisk.co.kr/publist/HDD1/beeild"+json[i].imageSrc.fd_IMAGE_SRC+"' style='width:100%; height:100%;'></article>");
+					set_draggable_attr($("#logic_comp_"+(i+1)));
+					set_resizable_attr($("#logic_comp_"+(i+1)));
+					$("#logic_comp_"+(i+1)).resizable("option", "aspectRatio", true);
 				}
+				set_droppable_attr("logic_comp");
 			},
 			error: function(err){
 				alert("BUTTON3_ERROR?");
