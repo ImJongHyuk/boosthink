@@ -28,8 +28,8 @@ $(document).on("click", ".make_app_right_button", function(e){
 
 //Give draggable function to each layout_component
 //원본 유지하고 싶으면 "helper: clone," 추가
-function set_draggable_attr(class_name){
-	$("."+class_name).draggable({
+function set_draggable_attr(comp){
+	comp.draggable({
 		stack: ".ui-draggable-dragging",
 		helper: "clone",
 		containment: "body",
@@ -78,21 +78,27 @@ function set_droppable_attr(class_name){
 		drop: function (event, ui) {
 			/* 현재 이동 중인 컴포넌트(clone) 원본 */
 			var original_comp = $(ui.draggable);
+			
 			/* 현재 이동 중인 컴포넌트(clone) 헬퍼 */
 			var helper = $(ui.helper);
+			
 			/* 이동 중인 컴포넌트가 복사본이 아닌 원본일 경우 */
 			if(original_comp.attr('original') == 1){
 				/* 복사된 컴포넌트 */
-				var copy_comp = $(ui.draggable).clone().attr('original',0).attr('id',$("[id^='"+original_comp.attr("id")+"']").length);
-				alert(helper.offset().top);
+				var copy_comp = $(ui.draggable).clone().attr('original',0).attr('id',original_comp.attr("id")+"_"+$("[id^='"+original_comp.attr("id")+"']").length);
 				copy_comp.css("position","absolute").offset({top: (helper.offset().top-$("#make_app_main").offset().top), left: (helper.offset().left-$("#make_app_main").offset().left)});
 				/* Convert percent to pixel */
 				copy_comp.css('width',original_comp.width()).css('height',original_comp.height());
 				/* make_app_main에 붙임 */
 				$("#make_app_main").append(copy_comp);
-				
+				set_draggable_attr(copy_comp);
+
 				/* 이제 새로 복사된 copy_comp 에 draggable, resizable 기능 부여 */
 				////////////////////////////////////////////////
+			}
+			/* 이동 중인 컴포넌트가 복사본일 경우 */
+			else{
+				original_comp.offset({top: (helper.offset().top), left: (helper.offset().left)});
 			}
 		}
 	});
@@ -159,8 +165,9 @@ function load_make_app_state(change_app_state){
 				for(var i=0; i<json.length;i++){
 					$("#make_app_right_list").append("<article id = 'layout_comp_"+json[i].layoutCpnt.id+"' class='layout_comp' style='position: relative; width: 25%; text-align:center;' primarykey='"+json[i].layoutCpnt.id+"' original='1'>" +
 							"<img src='http://plto.ipdisk.co.kr/publist/HDD1/beeild"+json[i].imageSrc.fd_IMAGE_SRC+"'></article>");
+					set_draggable_attr($("#layout_comp_"+json[i].layoutCpnt.id));
 				}
-				set_draggable_attr("layout_comp");
+				
 				set_resizable_attr("layout_comp");
 				set_droppable_attr("layout_comp");
 			},
