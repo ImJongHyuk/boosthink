@@ -171,7 +171,8 @@ function load_make_app_state(change_app_state){
 					$("#make_app_right_list").append("<article id = '"+json[i].email+"'style='position: relative; width: 100%; text-align:center;'>"+json[i].email);
 				}
 			},
-			error: function(err){
+			error: function(request, status, err){
+				alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+err);
 				alert("BUTTON1_ERROR?");
 			}
 		});
@@ -187,8 +188,7 @@ function load_make_app_state(change_app_state){
 				for(var i=0; i<json.length;i++){
 					$("#make_app_right_list").append("<article id = 'layout_comp_"+json[i].layoutCpnt.id+"' class='layout_comp' style='position: relative; width: 25%; text-align:center;' primarykey='"+json[i].layoutCpnt.id+"' original='1'>" +
 							"<img src='http://plto.ipdisk.co.kr/publist/HDD1/beeild"+json[i].imageSrc.fd_IMAGE_SRC+"'></article>");
-					set_draggable_attr($("#layout_comp_"+json[i].layoutCpnt.id));				
-					set_resizable_attr($("#layout_comp_"+json[i].layoutCpnt.id));
+					set_draggable_attr($("#layout_comp_"+json[i].layoutCpnt.id));
 				}
 				set_droppable_attr("layout_comp");
 			},
@@ -208,12 +208,11 @@ function load_make_app_state(change_app_state){
 					$("#make_app_right_list").append("<article id = 'logic_comp_"+(i+1)+"' class='logic_comp' style='position: relative; width: 25%; text-align:center;' primarykey='"+ json[i].logicCpnt.id +"' original='1'>" +
 							"<img src='http://plto.ipdisk.co.kr/publist/HDD1/beeild"+json[i].imageSrc.fd_IMAGE_SRC+"' style='width:100%; height:100%;'></article>");
 					set_draggable_attr($("#logic_comp_"+(i+1)));
-					set_resizable_attr($("#logic_comp_"+(i+1)));
-					$("#logic_comp_"+(i+1)).resizable("option", "aspectRatio", true);
 				}
 				set_droppable_attr("logic_comp");
 			},
-			error: function(err){
+			error: function(request, status, err){
+				alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+err);
 				alert("BUTTON3_ERROR?");
 			}
 		});		
@@ -228,7 +227,8 @@ function load_make_app_state(change_app_state){
 					$("#make_app_right_list").append("<article id = '"+json[i].id+"'style='position: relative; width: 100%; text-align:center;'>"+json[i].id+"</article>");
 				}
 			},
-			error: function(err){
+			error: function(request, status, err){
+				alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+err);
 				alert("BUTTON4_ERROR?");
 			}
 		});
