@@ -36,66 +36,52 @@
 
 	<div class="container" style="position: absolute; top: 30%; left: 15%; right: 15%; width: 70%;">
 		<!-- <h2 style="text-align: left;"><img src="//i.imgur.com/T2qCras.png" id="" style="width: 150px; margin-left: 8%;"/></h2> -->
-		<form class="form-horizontal" role="form">
-		<div class="row">
-		<div class="col-sm-6" style="border-right: 5px; height: 100%; border-color: #707070; border-style: solid; padding-right: 50px;">
-			<div class="form-group">
-				<div class="col-sm-4"></div>
-				<div class="col-sm-8" style="text-align: left;"><img src="//i.imgur.com/T2qCras.png" id="" style="width: 150px;"/></div>
-			</div>
-			<div class="form-group">
-				<label class="control-label col-sm-4" for="email">Email:</label>
-				<div class="col-sm-8" style="text-align: left;">
-					<!-- <p class="form-control-static">someone@example.com</p> -->
-					<input type="text" class="form-control" id="usr" placeholder="Email Address" style="background-color: #d1e0ff;">
+		<form class="form-horizontal" role="form" style="height: 100%;">
+			<div class="row" style="height: 100%;">
+				<div class="col-sm-5" style="border-right: 5px; height: 100%; border-color: #707070; border-style: solid; padding-right: 50px;">
+					<div class="form-group">
+						<div class="col-sm-4"></div>
+						<div class="col-sm-8" style="text-align: left;"><img src="//i.imgur.com/T2qCras.png" id="" style="width: 135px; height: auto;"/></div>
+					</div>
+					<div class="form-group">
+						<!-- <label class="control-label col-sm-4" for="email">Email:</label> -->
+						<div class="col-sm-offset-4 col-sm-8" style="text-align: left;">
+							<!-- <p class="form-control-static">someone@example.com</p> -->
+							<input type="email" class="form-control" id="email" placeholder="Email Address" style="background-color: #d1e0ff;">
+						</div>
+					</div>
+					<div class="form-group">
+						<!-- <label class="control-label col-sm-4" for="pwd">Password:</label> -->
+						<div class="col-sm-offset-4 col-sm-8">
+							<input type="password" class="form-control" id="pwd" placeholder="Password" style="background-color: #ffdeda;">
+						</div>
+					</div>
+					<div class="form-group" style="margin-bottom: 10px;">
+						<div class="col-sm-offset-4 col-sm-8" style="text-align: left;">
+							<button type="submit" class="btn btn-default" style="width: 90%; background-color: #ededed;">Login</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-7" style="height: auto; padding-top: 60px; padding-left: 20px;">
+					<div class="col-sm-6" style="height: 100%; font-size: 18px; text-align: left;">
+						Login with :<br>
+						<a href="" onfocus="this.blur()">
+							<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/facebook.png" style="width: 50px; height: auto; margin-top: 5%;">
+						</a>
+						<a href="" onfocus="this.blur()">
+							<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/google.png" style="width: 50px; height: auto; margin-top: 5%; margin-left: 2%;">
+						</a>
+					</div>
+					<!-- <div class="col-sm-4" style="text-align: left;">
+						<a href="" onfocus="this.blur()">
+							<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/facebook.png" style="width: 50px; height: auto;">
+						</a><br>
+						<a href="" onfocus="this.blur()">
+							<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/google.png" style="width: 50px; height: auto; margin-top: 20px;">
+						</a>
+					</div> -->
 				</div>
 			</div>
-			<div class="form-group">
-				<label class="control-label col-sm-4" for="pwd">Password:</label>
-				<div class="col-sm-8">
-					<input type="password" class="form-control" id="pwd" placeholder="Password" style="background-color: #ffdeda;">
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-sm-offset-4 col-sm-8" style="text-align: left;">
-					<button type="submit" class="btn btn-default" style="width: 90%; background-color: #ededed;">Login</button>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6" style="padding-top: 4%;">
-			<div class="col-sm-2" style="padding: 9% 0% 9% 0%; font-size: 18px; text-align: left;">Login with</div>
-			<div class="col-sm-4" style="text-align: left;">
-			<a href="" onfocus="this.blur()">
-				<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/facebook.png" style="width: 50px; height: auto;">
-			</a><br>
-			<a href="" onfocus="this.blur()">
-				<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/google.png" style="width: 50px; height: auto; margin-top: 20px;">
-			</a>
-			</div>
-		</div>
-		</div>
-			<!-- <div class="form-group">
-				<div class="col-sm-2"></div>
-				<div class="col-sm-4" style="text-align: left;"><img src="//i.imgur.com/T2qCras.png" id="" style="width: 150px;"/></div>
-			</div>
-			<div class="form-group">
-				<label class="control-label col-sm-2" for="email">Email:</label>
-				<div class="col-sm-4" style="text-align: left;">
-					<!-- <p class="form-control-static">someone@example.com</p>
-					<input type="text" class="form-control" id="usr" placeholder="Email Address" style="background-color: #d1e0ff;">
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="control-label col-sm-2" for="pwd">Password:</label>
-				<div class="col-sm-4">
-					<input type="password" class="form-control" id="pwd" placeholder="Password" style="background-color: #ffdeda;">
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-sm-offset-2 col-sm-4" style="text-align: left;">
-					<button type="submit" class="btn btn-default" style="width: 90%; background-color: #ededed;">Login</button>
-				</div>
-			</div> -->
 		</form>
 	</div>
 
