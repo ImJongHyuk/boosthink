@@ -38,7 +38,7 @@
 		<!-- <h2 style="text-align: left;"><img src="//i.imgur.com/T2qCras.png" id="" style="width: 150px; margin-left: 8%;"/></h2> -->
 		<form class="form-horizontal" role="form" style="height: 100%;">
 			<div class="row" style="height: 100%;">
-				<div class="col-sm-5" style="border-right: 5px; height: 100%; border-color: #707070; border-style: solid; padding-right: 50px;">
+				<div class="col-sm-5" style="border-right: 3.5px; height: 100%; border-color: #707070; border-style: solid; padding-right: 50px;">
 					<div class="form-group">
 						<div class="col-sm-4"></div>
 						<div class="col-sm-8" style="text-align: left;"><img src="//i.imgur.com/T2qCras.png" id="" style="width: 135px; height: auto;"/></div>
