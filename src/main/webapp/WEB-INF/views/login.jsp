@@ -40,24 +40,24 @@
 			<div class="row" style="height: 100%;">
 				<div class="col-sm-5" style="border-right: 3.5px; height: 100%; border-color: #707070; border-style: solid; padding-right: 50px;">
 					<div class="form-group">
-						<div class="col-sm-4"></div>
-						<div class="col-sm-8" style="text-align: left;"><img src="//i.imgur.com/T2qCras.png" id="" style="width: 135px; height: auto;"/></div>
+						<div class="col-sm-3"></div>
+						<div class="col-sm-9" style="text-align: left;"><img src="//i.imgur.com/T2qCras.png" id="" style="width: 135px; height: auto;"/></div>
 					</div>
 					<div class="form-group">
 						<!-- <label class="control-label col-sm-4" for="email">Email:</label> -->
-						<div class="col-sm-offset-4 col-sm-8" style="text-align: left;">
+						<div class="col-sm-offset-3 col-sm-9" style="text-align: left;">
 							<!-- <p class="form-control-static">someone@example.com</p> -->
 							<input type="email" class="form-control" id="email" placeholder="Email Address" style="background-color: #d1e0ff;">
 						</div>
 					</div>
 					<div class="form-group">
 						<!-- <label class="control-label col-sm-4" for="pwd">Password:</label> -->
-						<div class="col-sm-offset-4 col-sm-8">
+						<div class="col-sm-offset-3 col-sm-9">
 							<input type="password" class="form-control" id="pwd" placeholder="Password" style="background-color: #ffdeda;">
 						</div>
 					</div>
 					<div class="form-group" style="margin-bottom: 10px;">
-						<div class="col-sm-offset-4 col-sm-8" style="text-align: left;">
+						<div class="col-sm-offset-3 col-sm-9" style="text-align: left;">
 							<button type="submit" class="btn btn-default" style="width: 90%; background-color: #ededed;">Login</button>
 						</div>
 					</div>
