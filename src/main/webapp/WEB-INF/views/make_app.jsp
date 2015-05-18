@@ -31,7 +31,7 @@
 	<!-- 화면 맨 위 -->
 	<header id="make_app_header">
 		<p align="left" style="float: left; width: 15%; height: 100%; margin: 0.7% 0px 0px 1.5%;">
-			<a href="https://165.246.44.221:8443/plto-20150331/make_app">
+			<a href="https://165.246.44.221:8443/plto-20150331/make_app" onfocus="this.blur()">
 				<img height="70%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/play_together.png" id=""/>
 			</a>
 		</p>
