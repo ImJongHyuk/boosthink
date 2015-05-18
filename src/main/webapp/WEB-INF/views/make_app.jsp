@@ -27,7 +27,7 @@
 
 </head>
 
-<body>
+<body style="overflow: hidden;">
 	<!-- 화면 맨 위 -->
 	<header id="make_app_header">
 		<p align="left" style="float: left; width: 15%; height: 100%; margin: 0.7% 0px 0px 1.5%;">

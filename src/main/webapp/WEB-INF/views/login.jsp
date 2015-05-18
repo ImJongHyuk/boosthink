@@ -65,12 +65,8 @@
 				<div class="col-sm-7" style="height: auto; padding-top: 60px; padding-left: 20px;">
 					<div class="col-sm-6" style="height: 100%; font-size: 18px; text-align: left;">
 						Login with :<br>
-						<a href="" onfocus="this.blur()">
-							<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/facebook.png" style="width: 50px; height: auto; margin-top: 5%;">
-						</a>
-						<a href="" onfocus="this.blur()">
-							<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/google.png" style="width: 50px; height: auto; margin-top: 5%; margin-left: 2%;">
-						</a>
+						<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/facebook.png" onmouseover="this.src='http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/facebook_blending.png'" onmouseout="this.src='http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/facebook.png'" onclick="" border="0" style="width: 50px; height: auto; margin-top: 5%; cursor: pointer;">
+						<img src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/google.png" onmouseover="this.src='http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/google_blending.png'" onmouseout="this.src='http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/google.png'" onclick="" style="width: 50px; height: auto; margin-top: 5%; margin-left: 2%; cursor: pointer;">
 					</div>
 					<!-- <div class="col-sm-4" style="text-align: left;">
 						<a href="" onfocus="this.blur()">
