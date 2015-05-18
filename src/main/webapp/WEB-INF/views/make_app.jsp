@@ -31,7 +31,9 @@
 	<!-- 화면 맨 위 -->
 	<header id="make_app_header">
 		<p align="left" style="float: left; width: 15%; height: 100%; margin: 0.7% 0px 0px 1.5%;">
-			<img height="70%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/play_together.png" id=""/>
+			<a href="https://165.246.44.221:8443/plto-20150331/make_app">
+				<img height="70%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/play_together.png" id=""/>
+			</a>
 		</p>
 		<p align="right" style="float: right; width: 40%; height: 100%; margin: 0.5% 8% 0px 0px;">
 			<img height="80%" src="http://plto.ipdisk.co.kr/publist/HDD1/beeild/plto_image/1430246785_megaphone.png" id=""/>
