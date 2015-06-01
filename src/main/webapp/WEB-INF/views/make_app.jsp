@@ -22,6 +22,7 @@
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="//code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
 <script src="<c:url value='/resources/js/make_app.js'/>"></script>
+<script src="<c:url value='/resources/js/a_hyunjun.js'/>"></script>
 
 <script src="<c:url value='/resources/js/modernizr.custom.79639.js'/>"></script>
 

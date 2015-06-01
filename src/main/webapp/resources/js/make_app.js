@@ -205,9 +205,10 @@ function load_make_app_state(change_app_state){
 			type: "GET",
 			success: function(json){
 				for(var i=0; i<json.length;i++){
-					$("#make_app_right_list").append("<article id = 'logic_comp_"+(i+1)+"' class='logic_comp' style='position: relative; width: 25%; text-align:center;' primarykey='"+ json[i].logicCpnt.id +"' original='1'>" +
+					$("#make_app_right_list").append("<article id = 'logic_comp_"+(i+1)+"' class='logic_comp' style='position: relative; width: 50%; text-align:center;' primarykey='"+ json[i].logicCpnt.id +"' original='1'>" +
 							"<img src='http://plto.ipdisk.co.kr/publist/HDD1/beeild"+json[i].imageSrc.fd_IMAGE_SRC+"' style='width:100%; height:100%;'></article>");
 					set_draggable_attr($("#logic_comp_"+(i+1)));
+					console.log(json[i]);
 				}
 				set_droppable_attr("logic_comp");
 			},

@@ -1,4 +1,0 @@
-// Jin
-function abs(){
-	
-}
